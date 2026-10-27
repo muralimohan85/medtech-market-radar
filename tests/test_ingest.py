@@ -123,3 +123,10 @@ def test_upload_through_the_radar_opens_market_and_pricing(radar):
     e = radar.add_upload(SAMPLE, "2026-07-14")
     assert e.sections == ["market", "pricing"] and len(e.fact_ids) == 2
     assert all(radar.store.fact(f).licence == "upload_internal" for f in e.fact_ids)
+
+
+def test_require_term_keeps_unrelated_products_of_a_tracked_company_out(radar):
+    item = news("rq", "2026-06-01", "Kestrel launches a handheld lactate meter", "Kestrel Diagnostics launched a handheld lactate meter.")
+    assert radar.interp.read(item).in_scope                  # a tracked company is enough by default
+    radar.brief.scope.require_term = True
+    assert not radar.interp.read(item).in_scope              # but not when the watch requires one of its terms

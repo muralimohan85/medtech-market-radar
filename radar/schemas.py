@@ -29,6 +29,7 @@ class Scope(BaseModel):
     include_any: list[str] = Field(default_factory=list)
     exclude_any: list[str] = Field(default_factory=list)      # out of scope unless an include term also appears
     exclude_always: list[str] = Field(default_factory=list)   # out of scope whatever else the item says
+    require_term: bool = False      # True: even items about a tracked company must mention one of the watch terms
 
 
 class WatchBrief(BaseModel):

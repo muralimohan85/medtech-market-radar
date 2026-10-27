@@ -105,6 +105,8 @@ class Interpreter:
         if ex and not inc:
             return False, [f"out of scope: mentions '{ex}' and nothing that places it in this market"]
         term = _any(text, self.brief.terms)
+        if not term and self.brief.scope.require_term:
+            return False, ["does not mention any of the watch terms"]
         if not term and not entity:
             return False, ["not about the watched topic or a tracked company"]
         if not inc and not entity:
