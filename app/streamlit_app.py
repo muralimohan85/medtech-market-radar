@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ui import esc, inject, kind_pill, kpi, level_pill, md, pill, threat_pill  # noqa: E402
 
-from radar import views  # noqa: E402
+from radar import views, watches  # noqa: E402
 from radar.config import SECTION_ORDER, section_titles, sources_config  # noqa: E402
 from radar.engine import Radar  # noqa: E402
 from radar.report import export  # noqa: E402
@@ -64,13 +64,37 @@ def build_real(live_apis: bool) -> Radar:
     return r
 
 
+def build_user(watch_id: str, live_apis: bool) -> Radar:
+    """One of your saved watches. Its evidence database lives in the workspace, so it persists between sessions."""
+    r = Radar.live(watch_id, offline=not live_apis, **_claude())
+    if not r.store.latest():
+        r.bootstrap(date.today().isoformat(), "You")
+    return r
+
+
 def radar() -> Radar:
     key = st.session_state.get("watch", "demo")
     cache = st.session_state.setdefault("radars", {})
     if key not in cache:
-        with st.spinner("Replaying sources and building the report…"):
-            cache[key] = build_demo() if key == "demo" else build_real(st.session_state.get("live_apis", False))
+        live = key.startswith("user:") or st.session_state.get("live_apis", False)
+        with st.spinner("Pulling sources and building the report…"):
+            if key == "demo":
+                cache[key] = build_demo()
+            elif key == "real":
+                cache[key] = build_real(live)
+            else:
+                cache[key] = build_user(key.split(":", 1)[1], live)
     return cache[key]
+
+
+def open_watch(key: str) -> None:
+    """Switch to a watch from a page (the sidebar picks it up on the next run)."""
+    st.session_state["next_watch"] = key
+    st.session_state.get("radars", {}).pop(key, None)
+    st.switch_page(PAGES["overview"])
+
+
+BUILTIN_KEYS = {"hs_troponin_poc": "demo", "hs_troponin_poc_live": "real"}
 
 
 def flash(msg: str, kind: str = "success") -> None:
@@ -86,11 +110,20 @@ def show_flash() -> None:
 # ====================================================================== sidebar
 with st.sidebar:
     st.markdown("#### Watch")
-    choice = st.radio("Watch", ["Demo scenario (fictional)", "Real FDA data: troponin"], label_visibility="collapsed",
-                      index=0 if st.session_state.get("watch", "demo") == "demo" else 1)
-    st.session_state["watch"] = "demo" if choice.startswith("Demo") else "real"
+    yours = [w for w in watches.list_watches() if w["kind"] == "yours"]
+    options = ["demo", "real"] + [f"user:{w['id']}" for w in yours]
+    labels = {"demo": "Demo scenario (fictional)", "real": "Real FDA data: troponin",
+              **{f"user:{w['id']}": f"{w['name']}  ·  yours" for w in yours}}
+    if st.session_state.get("next_watch") in options:
+        st.session_state["watch_pick"] = st.session_state.pop("next_watch")
+    if st.session_state.get("watch_pick") not in options:
+        st.session_state["watch_pick"] = "demo"
+    st.radio("Watch", options, format_func=lambda k: labels.get(k, k), label_visibility="collapsed", key="watch_pick")
+    st.session_state["watch"] = st.session_state["watch_pick"]
     if st.session_state["watch"] == "real":
         st.checkbox("Try the live APIs (otherwise the committed openFDA snapshot)", key="live_apis")
+    elif st.session_state["watch"].startswith("user:"):
+        st.caption("Your watches pull live public sources. Create more on the Watches page.")
     st.markdown("#### Engine")
     st.text_input("Anthropic API key (optional)", type="password", key="api_key",
                   help="Without a key the deterministic engine runs. With a key, Claude reads news and writes sections; "
@@ -473,6 +506,44 @@ def page_competitors() -> None:
             st.rerun()
 
 
+def selected_sources(r: Radar) -> None:
+    """The sources this watch uses, as chosen in its brief, with an editor for your own watches."""
+    cat = watches.catalogue()
+    chosen = [x for x in cat if x["name"] in r.brief.sources]
+    off = [x for x in cat if x["name"] not in r.brief.sources]
+    chips = "".join(source_chip(x, r.brief.cadence.get(x["name"], x["cadence"])) for x in chosen)
+    off_chips = "".join(f'<span class="mr-chip" style="color:#8A979F;text-decoration:line-through">{esc(x["label"])}</span>' for x in off)
+    md(f'<div class="mr-card" style="border-top:3px solid #0B6176"><h4>Sources selected for this watch ({len(chosen)} of {len(cat)})</h4>'
+       f'{chips}<div class="mr-foot" style="margin-top:6px">Not used: </div>{off_chips or "<span class=mr-foot>none</span>"}'
+       '<div class="mr-foot" style="margin-top:8px"><span class="mr-chip" style="background:#ECEEFA">licensed</span>'
+       '<span class="mr-chip" style="background:#E8F3EC">public</span><span class="mr-chip" style="background:#F8F0E4">upload</span>'
+       ' · cadence after each name</div></div>')
+    key = st.session_state.get("watch", "demo")
+    if not key.startswith("user:"):
+        st.caption("This is a built-in watch, so its sources are fixed. To choose your own, create a watch on the Watches page "
+                   "(you can start from a copy of this one).")
+        return
+    with st.expander("Change sources"):
+        with st.form("sources_form"):
+            picks, cads = [], {}
+            for x in cat:
+                c1, c2 = st.columns([3, 1.3])
+                if c1.checkbox(x["label"] + (" · demo replay only" if x["demo_only"] else ""), value=x["name"] in r.brief.sources,
+                               key=f"edit_src_{x['name']}"):
+                    picks.append(x["name"])
+                cur = r.brief.cadence.get(x["name"], x["cadence"])
+                cads[x["name"]] = c2.selectbox("Cadence", watches.CADENCES, index=watches.CADENCES.index(cur),
+                                               key=f"edit_cad_{x['name']}", label_visibility="collapsed")
+            if st.form_submit_button("Save sources", type="primary"):
+                if not picks:
+                    st.error("Pick at least one source.")
+                else:
+                    watches.update_sources(r.brief.id, picks, cads)
+                    st.session_state.get("radars", {}).pop(key, None)
+                    flash(f"Saved: this watch now uses {len(picks)} source(s). New sources are pulled on their next check.")
+                    st.rerun()
+
+
 def page_sources() -> None:
     r = radar()
     show_flash()
@@ -481,6 +552,7 @@ def page_sources() -> None:
     md('<div class="mr-sub">Where this watch gets its facts. Licensed content stays in your workspace and is quoted only as '
        'your licence allows.</div>')
     st.write("")
+    selected_sources(r)
     cfg = sources_config()
     pulls = {p["connector"]: p for p in r.store.pulls()}
     facts_by_conn: dict[str, int] = {}
@@ -508,6 +580,8 @@ def page_sources() -> None:
     with c1:
         with st.container(border=True):
             st.markdown("**Your uploaded reports**")
+            if "upload" not in r.brief.sources:
+                st.caption("Uploads are not selected for this watch; you can still add a file here.")
             up = st.file_uploader("PDF, PPTX, XLSX, DOCX, CSV · stays private to you", type=["pdf", "pptx", "xlsx", "docx", "csv", "txt"],
                                   accept_multiple_files=True)
             tag = st.selectbox("Licence for these files", ["upload_internal", "licensed_no_quote"],
@@ -555,72 +629,214 @@ def page_sources() -> None:
                     st.code(s_, language=None)
 
 
+GROUP_BG = {"licensed": "#ECEEFA", "public": "#E8F3EC", "upload": "#F8F0E4"}
+
+
+def source_chip(x: dict, cadence: str) -> str:
+    return f'<span class="mr-chip" style="background:{GROUP_BG[x["group"]]}">{esc(x["label"])} · {esc(cadence)}</span>'
+
+
+def _csv(text: str) -> list[str]:
+    return [x.strip() for x in (text or "").split(",") if x.strip()]
+
+
+def watch_list() -> None:
+    rows = watches.list_watches()
+    yours = [w for w in rows if w["kind"] == "yours"]
+    builtin = [w for w in rows if w["kind"] == "built-in"]
+    cat = {c["name"]: c for c in watches.catalogue()}
+    st.markdown(f"**Your watches ({len(yours)})**")
+    if not yours:
+        st.caption("None yet. Create one below; it is saved to your workspace and appears in the sidebar.")
+    for w in yours:
+        with st.container(border=True):
+            a, b = st.columns([4, 2])
+            srcs = ", ".join(cat.get(x, {}).get("label", x) for x in w["sources"])
+            a.markdown(f"**{w['name']}**  \n<span class='mr-foot'>{esc(w['device_type'])} · {esc(w['diagnostic_solution'])} · "
+                       f"{esc(', '.join(w['regions']))}<br>Competitors: {esc(', '.join(w['competitors']) or '—')}<br>"
+                       f"Sources ({len(w['sources'])}): {esc(srcs)}<br>Saved {esc(w['updated'][:16].replace('T', ' '))} · "
+                       f"<code>{esc(w['id'])}</code></span>", unsafe_allow_html=True)
+            c1, c2, c3 = b.columns(3)
+            if c1.button("Open", key=f"open_{w['id']}", type="primary", width="stretch"):
+                open_watch(f"user:{w['id']}")
+            if c2.button("Edit", key=f"edit_{w['id']}", width="stretch"):
+                st.session_state["edit_watch"] = w["id"]
+                st.rerun()
+            with c3.popover("Delete", width="stretch"):
+                st.write(f"Delete **{w['name']}** and its evidence database?")
+                if st.button("Yes, delete", key=f"del_{w['id']}", type="primary"):
+                    watches.delete(w["id"])
+                    st.session_state.get("radars", {}).pop(f"user:{w['id']}", None)
+                    flash(f"Deleted {w['name']}.", "warning")
+                    st.rerun()
+    with st.expander(f"Built-in watches ({len(builtin)})"):
+        for w in builtin:
+            a, b = st.columns([5, 1])
+            a.markdown(f"**{w['name']}** · <span class='mr-foot'>{esc(w['diagnostic_solution'])} · {len(w['sources'])} sources · "
+                       "read-only (use it as a template below)</span>", unsafe_allow_html=True)
+            if w["id"] in BUILTIN_KEYS and b.button("Open", key=f"open_b_{w['id']}", width="stretch"):
+                open_watch(BUILTIN_KEYS[w["id"]])
+
+
 def page_new_watch() -> None:
-    r = radar()
-    header(r, "New watch")
-    st.markdown("# New watch")
-    md('<div class="mr-sub">Tell the agent what to research. The brief is a YAML file you can keep in version control.</div>')
+    show_flash()
+    st.markdown("# Watches")
+    md('<div class="mr-sub">Create, edit and open watches. Each one is saved as a YAML brief in your workspace and keeps its own '
+       'evidence database.</div>')
     st.write("")
+    watch_list()
+    st.write("")
+
+    rows = watches.list_watches()
+    by_id = {w["id"]: w for w in rows}
+    start_opts = ["template"] + [w["id"] for w in rows]
+    editing = st.session_state.pop("edit_watch", None)
+    if editing in by_id:
+        st.session_state["start_from"] = editing
+    if st.session_state.get("start_from") not in start_opts:
+        st.session_state["start_from"] = "template"
+    st.markdown("### Create or edit a watch")
+    st.selectbox("Start from", start_opts, key="start_from",
+                 format_func=lambda k: "Blank template (troponin example)" if k == "template"
+                 else f"{by_id[k]['name']} ({'edit yours' if by_id[k]['kind'] == 'yours' else 'copy of built-in'})")
+    base_id = st.session_state["start_from"]
+    base = WatchBrief.load(by_id[base_id]["path"]) if base_id != "template" else None
+    is_edit = bool(base and by_id[base_id]["kind"] == "yours")
+    k = base_id                                     # widget keys per starting point, so switching reloads the form
+
     form, preview = st.columns([3, 2])
     with form:
         with st.container(border=True):
             st.markdown("**What to watch**")
+            name = st.text_input("Watch name", base.name + ("" if is_edit else " (copy)") if base else "POC troponin, my market",
+                                 key=f"name_{k}", disabled=is_edit, help="The id is made from the name and cannot change later.")
             a, b = st.columns(2)
-            dtype = a.text_input("Medical device type", "Point-of-care immunoassay analyzer")
-            diag = b.text_input("Diagnostic solution", "High-sensitivity cardiac troponin I")
-            use = st.text_input("Clinical use", "Ruling heart attack in or out in emergency departments",
-                                help="Helps the agent tell your market apart from neighbouring ones, such as central-lab testing.")
+            dtype = a.text_input("Medical device type", base.device_type if base else "Point-of-care immunoassay analyzer", key=f"dt_{k}")
+            diag = b.text_input("Diagnostic solution", base.diagnostic_solution if base else "High-sensitivity cardiac troponin I",
+                                key=f"dg_{k}")
+            use = st.text_input("Clinical use", base.clinical_use if base else "Ruling heart attack in or out in emergency departments",
+                                key=f"use_{k}", help="Helps the agent tell your market apart from neighbouring ones, such as central-lab testing.")
             regions = st.multiselect("Regions", ["United States", "European Union", "India", "Japan", "China"],
-                                     ["United States", "European Union", "India"])
+                                     base.regions if base else ["United States", "European Union", "India"], key=f"rg_{k}")
+        terms0, codes0, out0 = suggest(diag, dtype, use)
+        with st.container(border=True):
+            st.markdown("**Search terms and scope**")
+            st.caption("Suggested from the device and solution; edit freely (comma separated).")
+            terms = st.text_area("Terms and synonyms", ", ".join(base.terms if base else terms0), key=f"tm_{k}_{diag}", height=68)
+            a, b = st.columns(2)
+            codes = a.text_input("FDA product codes", ", ".join(base.regulatory_ids.get("fda_product_codes", []) if base else
+                                                                [c.split()[-1] for c in codes0 if c.startswith("FDA")]),
+                                 key=f"pc_{k}_{diag}", help="Used to pull 510(k) clearances and recalls from openFDA.")
+            inc = b.text_input("In scope if it mentions", ", ".join(base.scope.include_any if base else
+                                                                  ["point-of-care", "point of care", "POC", "handheld", "whole blood", "cartridge"]),
+                               key=f"in_{k}")
+            out = st.text_input("Out of scope", ", ".join(base.scope.exclude_any if base else out0), key=f"out_{k}_{diag}")
         with st.container(border=True):
             st.markdown("**Competitors and your solution**")
-            comps = st.text_input("Competitors to watch (comma separated)", "Kestrel Diagnostics, Norvia Medical")
+            comps = st.text_input("Competitors to watch (comma separated)",
+                                  ", ".join(c.name for c in base.competitors) if base else "Kestrel Diagnostics, Norvia Medical", key=f"cp_{k}")
             st.caption("Optional. The agent also finds competitors you did not list and asks before tracking them.")
-            a, b = st.columns(2)
-            yours = a.text_input("Your solution", "[YOUR PRODUCT NAME]")
-            status_ = b.selectbox("Regulatory status", ["CE marked, US filing planned 2027", "In development", "Cleared in the US and EU"])
+            a, b, c = st.columns([2, 2, 1])
+            yours = a.text_input("Your solution", base.your_solution.name if base else "[YOUR PRODUCT NAME]", key=f"ys_{k}")
+            status_ = b.text_input("Regulatory status", base.your_solution.status if base else "CE marked; US filing planned 2027",
+                                   key=f"st_{k}")
+            year = c.number_input("US filing year", 2020, 2040, (base.your_solution.us_filing_year or 2027) if base else 2027, key=f"yr_{k}")
+        with st.container(border=True):
+            st.markdown("**Sources**")
+            st.caption("Pick where this watch gets its facts and how often each one is checked.")
+            cat = watches.catalogue()
+            chosen, cadence = [], {}
+            groups = [("licensed", "Licensed market research databases"), ("public", "Public and live sources"), ("upload", "Uploads")]
+            for g, title in groups:
+                items = [x for x in cat if x["group"] == g]
+                if not items:
+                    continue
+                st.markdown(f"<span class='mr-foot'><b>{title}</b></span>", unsafe_allow_html=True)
+                for x in items:
+                    # a new watch starts with the real public sources and uploads; the fictional samples are opt-in
+                    on_default = x["name"] in base.sources if base else (x["group"] != "licensed" and not x["demo_only"])
+                    c1, c2 = st.columns([3, 1.3])
+                    label = x["label"] + (" · demo replay only" if x["demo_only"] else "")
+                    if c1.checkbox(label, value=on_default, key=f"src_{k}_{x['name']}"):
+                        chosen.append(x["name"])
+                    cad_default = (base.cadence.get(x["name"]) if base else None) or x["cadence"]
+                    cadence[x["name"]] = c2.selectbox("Cadence", watches.CADENCES, index=watches.CADENCES.index(cad_default),
+                                                      key=f"cad_{k}_{x['name']}", label_visibility="collapsed",
+                                                      disabled=x["group"] == "upload")
         with st.container(border=True):
             st.markdown("**Refresh and alerts**")
-            cad = st.radio("Full report refresh", ["Daily", "Weekly", "Monthly"], index=1, horizontal=True)
-            st.caption("News is scanned every day either way. High-impact changes open a draft straight away.")
+            cads = ["daily", "weekly", "monthly"]
+            cad = st.radio("Full report refresh", cads, index=cads.index(base.refresh.get("report", "weekly")) if base else 1,
+                           horizontal=True, key=f"rf_{k}", format_func=str.capitalize)
+            st.caption("High-impact changes open a draft straight away, whatever the refresh cadence.")
             a, b = st.columns(2)
-            who = a.text_input("Send the digest to", "you@example.com")
-            ch = b.selectbox("Alerts by", ["Email and in-app", "In-app only", "Microsoft Teams (webhook)", "Slack (webhook)"])
-    terms, codes, out = suggest(diag, dtype, use)
+            who = a.text_input("Send the digest to", ", ".join(base.digest.get("recipients", [])) if base else "you@example.com", key=f"to_{k}")
+            chans = ["Email and in-app", "In-app only", "Microsoft Teams (webhook)", "Slack (webhook)"]
+            ch0 = base.digest.get("channel") if base else None
+            ch = b.selectbox("Alerts by", chans, index=chans.index(ch0) if ch0 in chans else 0, key=f"ch_{k}")
+
+    brief = {"id": base.id if is_edit else watches.slugify(name), "name": name.strip(), "device_type": dtype, "diagnostic_solution": diag,
+             "clinical_use": use, "regions": regions, "terms": _csv(terms),
+             "regulatory_ids": {"fda_product_codes": [c.upper() for c in _csv(codes)]},
+             "scope": {"include_any": _csv(inc), "exclude_any": _csv(out),
+                       "exclude_always": list(base.scope.exclude_always) if base else []},
+             "competitors": [{"name": c, "aliases": [c.split()[0]] if len(c.split()) > 1 else []} for c in _csv(comps)],
+             "your_solution": {"name": yours, "status": status_, "us_filing_year": int(year)},
+             "refresh": {"report": cad, "report_weekday": 0},
+             "cadence": {s_: cadence[s_] if s_ != "upload" else "immediate" for s_ in chosen},
+             "digest": {"recipients": _csv(who), "channel": ch},
+             "sources": chosen}
+    if base and base.short_name:
+        brief["short_name"] = base.short_name
+
     with preview:
+        cat_by = {x["name"]: x for x in watches.catalogue()}
+        src_html = "".join(source_chip(cat_by[s_], brief["cadence"][s_]) for s_ in chosen) or "<span class='mr-foot'>none selected</span>"
         md('<div class="mr-card"><h4>The agent will search for</h4><div class="mr-foot">Terms and synonyms</div>'
-           + "".join(f'<span class="mr-chip">{esc(t)}</span>' for t in terms)
+           + "".join(f'<span class="mr-chip">{esc(t)}</span>' for t in brief["terms"])
            + '<div class="mr-foot" style="margin-top:8px">Regulatory identifiers</div>'
-           + "".join(f'<span class="mr-chip" style="background:#E8F3EC;color:#2A7449">{esc(c)}</span>' for c in codes)
+           + "".join(f'<span class="mr-chip" style="background:#E8F3EC;color:#2A7449">FDA product code {esc(c)}</span>'
+                     for c in brief["regulatory_ids"]["fda_product_codes"])
            + '<div class="mr-foot" style="margin-top:8px">Out of scope</div>'
-           + "".join(f'<span class="mr-chip" style="background:#FBEAE6;color:#8E2716">{esc(o)}</span>' for o in out)
-           + '<p class="mr-foot" style="margin-top:10px">Drafted from your answers by fixed rules. Edit the YAML before you start.</p></div>')
-    slug = "".join(ch_ if ch_.isalnum() else "_" for ch_ in diag.lower()).strip("_")[:40]
-    brief = {"id": slug, "name": diag, "device_type": dtype, "diagnostic_solution": diag, "clinical_use": use, "regions": regions,
-             "terms": terms, "regulatory_ids": {"fda_product_codes": [c.split()[-1] for c in codes if c.startswith("FDA")]},
-             "scope": {"include_any": ["point-of-care", "point of care", "POC", "handheld", "whole blood", "cartridge"],
-                       "exclude_any": out},
-             "competitors": [{"name": c.strip(), "aliases": [c.strip().split()[0]]} for c in comps.split(",") if c.strip()],
-             "your_solution": {"name": yours, "status": status_,
-                               "us_filing_year": 2027 if "2027" in status_ else None},
-             "refresh": {"report": cad.lower(), "report_weekday": 0},
-             "cadence": {"news_rss": "daily", "openfda_510k": "weekly", "openfda_recall": "weekly", "clinicaltrials_gov": "weekly",
-                         "pubmed": "weekly", "upload": "immediate"},
-             "digest": {"recipients": [w.strip() for w in who.split(",")], "channel": ch},
-             "sources": ["news_rss", "openfda_510k", "openfda_recall", "clinicaltrials_gov", "pubmed", "upload"]}
-    text = yaml.safe_dump(brief, sort_keys=False, allow_unicode=True)
-    with st.expander("Watch brief (YAML)"):
-        st.code(text, language="yaml")
-    a, b = st.columns([1, 3])
-    a.download_button("Download brief", text, f"{slug}.yaml", type="primary")
-    b.caption(f"Save it as config/watches/{slug}.yaml, then run `python -m radar run {slug}` to start live research on public sources.")
-    try:
-        WatchBrief(**brief)
-    except Exception as e:  # noqa: BLE001 - show validation problems to the user
-        st.error(f"The brief is not valid yet: {e}")
+           + "".join(f'<span class="mr-chip" style="background:#FBEAE6;color:#8E2716">{esc(o)}</span>' for o in brief["scope"]["exclude_any"])
+           + f'<div class="mr-foot" style="margin-top:8px">Sources ({len(chosen)})</div>{src_html}</div>')
+        error = None
+        try:
+            WatchBrief(**brief)
+            if not chosen:
+                error = "Pick at least one source."
+            if not name.strip():
+                error = "Give the watch a name."
+        except Exception as e:  # noqa: BLE001 - show validation problems to the user
+            error = f"The brief is not valid yet: {e}"
+        if error:
+            st.error(error)
+        exists = (watches.user_dir() / f"{brief['id']}.yaml").exists()
+        if exists and not is_edit:
+            st.warning(f"A watch with the id `{brief['id']}` already exists. Change the name or edit that watch.")
+        verb = "Save changes" if is_edit else "Save watch"
+        c1, c2 = st.columns(2)
+        save = c1.button(verb, width="stretch", disabled=bool(error) or (exists and not is_edit))
+        save_open = c2.button(f"{verb} and open", type="primary", width="stretch", disabled=bool(error) or (exists and not is_edit))
+        if save or save_open:
+            try:
+                b, path = watches.save(brief, overwrite=is_edit)
+            except (ValueError, FileExistsError) as e:
+                st.error(str(e))
+            else:
+                st.session_state.get("radars", {}).pop(f"user:{b.id}", None)
+                flash(f"Saved '{b.name}' to {path.name}. It is listed above and in the sidebar.")
+                if save_open:
+                    open_watch(f"user:{b.id}")
+                st.session_state["start_from"] = b.id
+                st.rerun()
+        text = yaml.safe_dump(brief, sort_keys=False, allow_unicode=True)
+        st.download_button("Download brief (YAML)", text, f"{brief['id']}.yaml", width="stretch")
+        st.caption(f"Saved watches can also run from the command line: `python -m radar run {brief['id']}`.")
 
 
-KNOWN_CODES = {"troponin": ("FDA product code MMI", ["hs-cTnI", "high-sensitivity troponin", "POC troponin", "0/1-hour algorithm"],
+KNOWN_CODES = {"troponin": ("FDA product code MMI", ["troponin", "hs-cTnI", "hs-TnI", "cTnI", "high-sensitivity troponin", "POC troponin",
+                                                     "0/1-hour algorithm"],
                             ["central-lab analyzers", "troponin T research assays"]),
                "natriuretic": ("FDA product code NBC", ["BNP", "NT-proBNP", "heart failure testing"], ["central-lab analyzers"]),
                "d-dimer": ("FDA product code DAP", ["D-dimer", "venous thromboembolism rule-out"], ["central-lab coagulation analyzers"]),
@@ -640,6 +856,6 @@ PAGES = {
     "review": st.Page(page_review, title="Review redline", icon="📝", url_path="review"),
     "competitors": st.Page(page_competitors, title="Competitors", icon="🏁", url_path="competitors"),
     "sources": st.Page(page_sources, title="Sources and uploads", icon="🗂️", url_path="sources"),
-    "new": st.Page(page_new_watch, title="New watch", icon="➕", url_path="new-watch"),
+    "new": st.Page(page_new_watch, title="Watches", icon="➕", url_path="watches"),
 }
 st.navigation(list(PAGES.values()), position="top").run()

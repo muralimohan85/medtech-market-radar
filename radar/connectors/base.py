@@ -19,7 +19,7 @@ class SourceUnavailable(RuntimeError):
 
 
 def http_get(url: str, params: dict | None = None, headers: dict | None = None, timeout: int = 30,
-             retries: int = 2, pause: float = 1.0) -> bytes:
+             retries: int = 1, pause: float = 0.5) -> bytes:
     if params:
         url = url + ("&" if "?" in url else "?") + urllib.parse.urlencode(params, safe=":+[],")
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **(headers or {})})

@@ -24,7 +24,7 @@ departments). It runs in two modes:
 |---|---|
 | Connect to market research databases, configurable | Each vendor is a block in [`config/sources.yaml`](config/sources.yaml): endpoint, the env var that holds your key, and a field map. `rest_json` calls an API and `file_json` reads an export. Two fictional sample databases show the path end to end. |
 | Upload reports | PDF, PowerPoint, Excel, Word, CSV or text. Each file is read locally, and market size, growth and price statements are extracted as facts tagged with your licence choice. Text that tries to instruct an AI is quarantined. |
-| Inputs: diagnostic solution and device type | The watch brief ([example](config/watches/hs_troponin_poc.yaml)) also takes clinical use, regions, competitors, scope terms and your product. A *New watch* screen drafts it for you. |
+| Inputs: diagnostic solution and device type | The watch brief ([example](config/watches/hs_troponin_poc.yaml)) also takes clinical use, regions, competitors, scope terms, your product and the sources to use. The *Watches* screen creates, saves and edits briefs (`workspace/watches/`), and saved watches appear in the sidebar. |
 | Subscribe to news for the topics | RSS/Atom feeds and company newsrooms are checked daily. openFDA 510(k) and recalls, ClinicalTrials.gov and PubMed are checked weekly. Licensed databases are checked monthly. Uploads are read straight away. Every source keeps its own cadence. |
 | Keep refreshing the report and competitor analysis | Each new item becomes an event: what changed, which company, whether it is in scope, how material it is, and which sections it touches. A high-impact change opens a draft immediately; otherwise drafts open on the weekly refresh. Only the touched sections are rewritten, and the rest stay exactly as approved. |
 
@@ -117,8 +117,8 @@ output with hand labels ([scenario](evaluation/scenario_labels.yaml), [real](eva
 * **Overview:** KPI tiles, what changed, the market-size estimates side by side (with your working range), and the competitor table with citations.
 * **Review redline:** section-by-section del/ins, source cards with licence pills and corroboration, the checks on this draft, judgement-call flags, and *Approve and publish* or *Send back*.
 * **Competitors:** timeline of moves (public, licensed and upload pills), comparison against your solution, and rule-based *what to watch next*. Companies the radar discovers are shown but tracked only after you accept them.
-* **Sources and uploads:** connector status and fact counts, the upload dropzone with licence choice, cadence per feed, and quarantined text.
-* **New watch:** a form that drafts the brief (search terms, FDA product code, out-of-scope terms) as YAML.
+* **Sources and uploads:** the sources selected for this watch (editable for your own watches), connector status and fact counts, the upload dropzone with licence choice, cadence per feed, and quarantined text.
+* **Watches:** create a watch (device, solution, regions, search terms, FDA product codes, competitors, and the sources it uses with a cadence for each), save it, then open, edit or delete it later. Saved watches appear in the sidebar and keep their own evidence database.
 
 ## Run it
 

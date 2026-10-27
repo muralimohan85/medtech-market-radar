@@ -53,7 +53,9 @@ class WatchBrief(BaseModel):
     def load(cls, watch_id_or_path: str | Path) -> "WatchBrief":
         p = Path(watch_id_or_path)
         if not p.exists():
-            p = CONFIG / "watches" / f"{watch_id_or_path}.yaml"
+            from radar.watches import find  # your saved watches first, then the built-in ones
+
+            p = find(str(watch_id_or_path)) or CONFIG / "watches" / f"{watch_id_or_path}.yaml"
         return cls(**load_yaml(p))
 
     @property
