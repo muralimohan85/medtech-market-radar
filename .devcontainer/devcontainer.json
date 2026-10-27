@@ -1,0 +1,14 @@
+{
+  "name": "MedTech Market Radar",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install --user -r requirements.txt ruff",
+  "postAttachCommand": "streamlit run app/streamlit_app.py --server.headless true --server.enableCORS false --server.enableXsrfProtection false",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": { "label": "Market Radar app", "onAutoForward": "openPreview" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] },
+    "vscode": { "extensions": ["ms-python.python"] }
+  }
+}

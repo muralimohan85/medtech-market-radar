@@ -1,6 +1,7 @@
 # MedTech Market Radar
 
 [![CI](https://github.com/muralimohan85/medtech-market-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/muralimohan85/medtech-market-radar/actions/workflows/ci.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/muralimohan85/medtech-market-radar?quickstart=1)
 
 **A market research and competitor analysis agent for medical devices.** You give it a watch brief (device type,
 diagnostic solution, regions, competitors, your own product). It pulls from public sources, licensed market databases
@@ -129,6 +130,8 @@ make eval                       # replay evaluation; updates the table above
 make replay                     # the fictional scenario from the command line
 make live                       # pull real public sources now and open a draft if anything changed
 ```
+
+In the browser, with nothing to install: click **Open in GitHub Codespaces** above. The app starts by itself and opens in a preview tab after about two minutes.
 
 Docker: `docker build -t market-radar . && docker run -p 7860:7860 market-radar` (also works as a Hugging Face Space).
 
