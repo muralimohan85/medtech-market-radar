@@ -1,0 +1,24 @@
+# Ground truth for the real-data replay: every FDA 510(k) decision and recall for
+# product code MMI (troponin assays) from January 2023 to October 2026, labelled by hand
+# as point-of-care (in scope for the watch) or central-laboratory (out of scope).
+# Source: openFDA snapshot in data/public/. The engine never reads this file.
+#
+# alert: an analyst would want this in the digest (medium or high).
+
+clearances:
+  K253051: {in_scope: true, alert: true, why: "i-STAT hs-TnI on the i-STAT Alinity handheld system (point of care)"}
+  K252393: {in_scope: false, alert: false, why: "VITROS central-laboratory reagent pack"}
+  K243483: {in_scope: false, alert: false, why: "Beckman Access central-laboratory assay"}
+  K242870: {in_scope: false, alert: false, why: "Beckman Access central-laboratory assay"}
+  K240984: {in_scope: true, alert: true, why: "i-STAT hs-TnI cartridge on the i-STAT 1 handheld (point of care)"}
+  K241165: {in_scope: false, alert: false, why: "Atellica IM central-laboratory analyzer"}
+  K231974: {in_scope: true, alert: true, why: "PATHFAST compact immunoanalyzer, marketed for point-of-care and near-patient use"}
+  K222881: {in_scope: false, alert: false, why: "Beckman Access central-laboratory assay"}
+  K230648: {in_scope: false, alert: false, why: "Beckman Access central-laboratory assay"}
+  K230994: {in_scope: false, alert: false, why: "Alinity i STAT central-laboratory assay"}
+
+recalls:
+  Z-0727-2025: {in_scope: false, alert: false, why: "Beckman Access central-laboratory reagent"}
+  Z-1974-2023: {in_scope: true, alert: true, why: "Quidel Triage Cardiac Panel, a point-of-care test"}
+  Z-2357-2023: {in_scope: false, alert: false, why: "VITROS central-laboratory reagent pack"}
+  Z-2358-2023: {in_scope: false, alert: false, why: "VITROS central-laboratory calibrators"}

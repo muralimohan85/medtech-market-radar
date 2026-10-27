@@ -1,0 +1,40 @@
+# Ground truth for the fictional replay scenario (data/scenario/hs_troponin_poc.yaml).
+# Written by hand as an analyst would judge each item. The engine never reads this file.
+#
+# sections: the report sections this item should cause to be rewritten (the executive
+#           summary is listed only when the change is important enough to reach it).
+# level:    high | medium | low | noise. A list means either answer is acceptable.
+#           noise = out of scope, irrelevant, or a duplicate that adds nothing new.
+# duplicate_of: the earlier item this one repeats (it should corroborate, not alert).
+# injection: the text contains an instruction aimed at an AI model.
+# new_entity: the item introduces a competitor the brief did not list.
+
+E01: {sections: [pipeline], level: [low, medium]}
+E02: {sections: [], level: noise, note: central-lab assay, out of scope}
+E03: {sections: [pipeline], level: medium}
+E04: {sections: [], level: noise, duplicate_of: E03}
+E05: {sections: [pipeline], level: medium}
+E06: {sections: [pricing], level: medium}
+E07: {sections: [], level: noise, note: sports-science research, not the market}
+E08: {sections: [], level: noise, duplicate_of: B02, note: identical re-delivery}
+E09: {sections: [market], level: [low, medium]}
+E10: {sections: [competition, pricing], level: medium, injection: true, new_entity: Halden Point-of-Care}
+E11: {sections: [market, pricing], level: medium, note: analyst upload with a third, lower estimate}
+E12: {sections: [summary, competition, regulatory], level: high, note: safety notice on a direct competitor}
+E13: {sections: [], level: low, note: patent goes to the competitor timeline, not the report}
+E14: {sections: [competition], level: medium}
+E15: {sections: [], level: noise, note: central-lab product under the same product code}
+E16: {sections: [pipeline], level: medium}
+E17: {sections: [pricing], level: medium}
+E18: {sections: [competition, regulatory], level: [low, medium], note: follow-up closing E12}
+E19: {sections: [segments], level: [low, medium]}
+E20: {sections: [market], level: medium}
+E21: {sections: [pipeline], level: medium}
+E22: {sections: [], level: noise}
+E23: {sections: [], level: noise, note: central-lab troponin T research assay, out of scope}
+E24: {sections: [pricing], level: medium}
+E25: {sections: [summary, competition, regulatory], level: high, note: first US clearance among tracked competitors}
+E26: {sections: [], level: noise, duplicate_of: E25}
+E27: {sections: [], level: noise, duplicate_of: E25}
+E28: {sections: [competition], level: medium}
+E29: {sections: [], level: [noise, low]}

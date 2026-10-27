@@ -1,0 +1,766 @@
+{
+ "scenario": {
+  "engine": "deterministic",
+  "items": 29,
+  "clusters": 26,
+  "versions_published": 19,
+  "routing": {
+   "exact_match": 1.0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "materiality_accuracy": 1.0,
+  "alerts": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "high_caught": "2/2",
+   "count": 16,
+   "immediate": 2
+  },
+  "noise_kept_out": "6/6",
+  "duplicates_merged": "4/4",
+  "injection_quarantined": "1/1",
+  "new_competitor_found": "1/1",
+  "citations": {
+   "sentences_checked": 196,
+   "cited": 196,
+   "share_cited": 1.0,
+   "unsupported_numbers": 0,
+   "licence_breaches": 0,
+   "injection_leaks": 0
+  },
+  "untouched_sections_preserved": "99/99",
+  "sections_rewritten_per_version": 1.5,
+  "freshness_days": {
+   "median": 0.0,
+   "max": 20,
+   "by_first_source": {
+    "clinicaltrials_gov": 5.0,
+    "licensed_db_a": 20,
+    "news_rss": 0,
+    "pubmed": 5,
+    "upload": 0
+   }
+  },
+  "cost_usd": 0.0,
+  "tokens": {
+   "input": 0,
+   "output": 0
+  },
+  "rows": [
+   {
+    "cluster": "E01",
+    "items": [
+     "E01"
+    ],
+    "label_level": [
+     "low",
+     "medium"
+    ],
+    "pred_level": "medium",
+    "label_sections": [
+     "pipeline"
+    ],
+    "pred_sections": [
+     "pipeline"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-05-06",
+    "published": "2026-05-06",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E02",
+    "items": [
+     "E02"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-05-12",
+    "published": "2026-05-12",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E03",
+    "items": [
+     "E03",
+     "E04"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pipeline"
+    ],
+    "pred_sections": [
+     "pipeline"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-05-25",
+    "published": "2026-05-20",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E05",
+    "items": [
+     "E05"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pipeline"
+    ],
+    "pred_sections": [
+     "pipeline"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-06-08",
+    "published": "2026-06-03",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E06",
+    "items": [
+     "E06"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pricing"
+    ],
+    "pred_sections": [
+     "pricing"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-06-10",
+    "published": "2026-06-10",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E07",
+    "items": [
+     "E07"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-06-18",
+    "published": "2026-06-18",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E08",
+    "items": [
+     "E08"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-07-02",
+    "published": "2026-06-24",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E09",
+    "items": [
+     "E09"
+    ],
+    "label_level": [
+     "low",
+     "medium"
+    ],
+    "pred_level": "low",
+    "label_sections": [
+     "market"
+    ],
+    "pred_sections": [
+     "market"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-07-02",
+    "published": "2026-07-01",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E10",
+    "items": [
+     "E10"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "competition",
+     "pricing"
+    ],
+    "pred_sections": [
+     "competition",
+     "pricing"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-07-08",
+    "published": "2026-07-08",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E11",
+    "items": [
+     "E11"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "market",
+     "pricing"
+    ],
+    "pred_sections": [
+     "market",
+     "pricing"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-07-14",
+    "published": "2026-07-14",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E12",
+    "items": [
+     "E12"
+    ],
+    "label_level": "high",
+    "pred_level": "high",
+    "label_sections": [
+     "competition",
+     "regulatory",
+     "summary"
+    ],
+    "pred_sections": [
+     "competition",
+     "regulatory",
+     "summary"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-07-22",
+    "published": "2026-07-22",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E13",
+    "items": [
+     "E13"
+    ],
+    "label_level": "low",
+    "pred_level": "low",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-08-03",
+    "published": "2026-07-30",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E14",
+    "items": [
+     "E14"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "competition"
+    ],
+    "pred_sections": [
+     "competition"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-08-05",
+    "published": "2026-08-05",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E15",
+    "items": [
+     "E15"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-08-17",
+    "published": "2026-08-12",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E16",
+    "items": [
+     "E16"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pipeline"
+    ],
+    "pred_sections": [
+     "pipeline"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-08-24",
+    "published": "2026-08-19",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E17",
+    "items": [
+     "E17"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pricing"
+    ],
+    "pred_sections": [
+     "pricing"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-08-26",
+    "published": "2026-08-26",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E18",
+    "items": [
+     "E18"
+    ],
+    "label_level": [
+     "low",
+     "medium"
+    ],
+    "pred_level": "medium",
+    "label_sections": [
+     "competition",
+     "regulatory"
+    ],
+    "pred_sections": [
+     "competition",
+     "regulatory"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-09-02",
+    "published": "2026-09-02",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E19",
+    "items": [
+     "E19"
+    ],
+    "label_level": [
+     "low",
+     "medium"
+    ],
+    "pred_level": "low",
+    "label_sections": [
+     "segments"
+    ],
+    "pred_sections": [
+     "segments"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-09-14",
+    "published": "2026-09-09",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E20",
+    "items": [
+     "E20"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "market"
+    ],
+    "pred_sections": [
+     "market"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-05",
+    "published": "2026-09-15",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E21",
+    "items": [
+     "E21"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pipeline"
+    ],
+    "pred_sections": [
+     "pipeline"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-09-23",
+    "published": "2026-09-23",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E22",
+    "items": [
+     "E22"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-09-29",
+    "published": "2026-09-29",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E23",
+    "items": [
+     "E23"
+    ],
+    "label_level": "noise",
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-05",
+    "published": "2026-09-30",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E24",
+    "items": [
+     "E24"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "pricing"
+    ],
+    "pred_sections": [
+     "pricing"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-07",
+    "published": "2026-10-07",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E25",
+    "items": [
+     "E25",
+     "E26",
+     "E27"
+    ],
+    "label_level": "high",
+    "pred_level": "high",
+    "label_sections": [
+     "competition",
+     "regulatory",
+     "summary"
+    ],
+    "pred_sections": [
+     "competition",
+     "regulatory",
+     "summary"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-22",
+    "published": "2026-10-22",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E28",
+    "items": [
+     "E28"
+    ],
+    "label_level": "medium",
+    "pred_level": "medium",
+    "label_sections": [
+     "competition"
+    ],
+    "pred_sections": [
+     "competition"
+    ],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-23",
+    "published": "2026-10-23",
+    "engine": "deterministic"
+   },
+   {
+    "cluster": "E29",
+    "items": [
+     "E29"
+    ],
+    "label_level": [
+     "noise",
+     "low"
+    ],
+    "pred_level": "noise",
+    "label_sections": [],
+    "pred_sections": [],
+    "level_ok": true,
+    "sections_ok": true,
+    "detected": "2026-10-26",
+    "published": "2026-10-26",
+    "engine": "deterministic"
+   }
+  ]
+ },
+ "real": {
+  "events_labelled": 14,
+  "scope_accuracy": 1.0,
+  "alert_accuracy": 1.0,
+  "point_of_care_alerted": "4/4",
+  "central_lab_kept_out": "10/10",
+  "versions_published": 5,
+  "share_cited": 1.0,
+  "rows": [
+   {
+    "id": "K253051",
+    "type": "clearance",
+    "date": "2026-06-11",
+    "label_in_scope": true,
+    "pred_in_scope": true,
+    "label_alert": true,
+    "pred_alert": true,
+    "pred_level": "medium",
+    "why": "i-STAT hs-TnI on the i-STAT Alinity handheld system (point of care)",
+    "reasons": [
+     "in scope: company Abbott Point of Care / point of care",
+     "base fda_510k 0.62",
+     "tracked company +0.1",
+     "follow-up -0.12"
+    ]
+   },
+   {
+    "id": "K252393",
+    "type": "clearance",
+    "date": "2025-10-29",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "VITROS central-laboratory reagent pack",
+    "reasons": [
+     "out of scope: mentions 'VITROS'"
+    ]
+   },
+   {
+    "id": "K243483",
+    "type": "clearance",
+    "date": "2025-08-01",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Beckman Access central-laboratory assay",
+    "reasons": [
+     "out of scope: mentions 'Access hs'"
+    ]
+   },
+   {
+    "id": "K242870",
+    "type": "clearance",
+    "date": "2025-06-16",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Beckman Access central-laboratory assay",
+    "reasons": [
+     "out of scope: mentions 'Access hs'"
+    ]
+   },
+   {
+    "id": "K240984",
+    "type": "clearance",
+    "date": "2025-01-03",
+    "label_in_scope": true,
+    "pred_in_scope": true,
+    "label_alert": true,
+    "pred_alert": true,
+    "pred_level": "medium",
+    "why": "i-STAT hs-TnI cartridge on the i-STAT 1 handheld (point of care)",
+    "reasons": [
+     "in scope: company Abbott Point of Care / point of care",
+     "base fda_510k 0.62",
+     "tracked company +0.1",
+     "follow-up -0.12"
+    ]
+   },
+   {
+    "id": "K241165",
+    "type": "clearance",
+    "date": "2024-07-25",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Atellica IM central-laboratory analyzer",
+    "reasons": [
+     "mentions 'high-sensitivity troponin' but nothing places it in this market"
+    ]
+   },
+   {
+    "id": "K231974",
+    "type": "clearance",
+    "date": "2024-03-20",
+    "label_in_scope": true,
+    "pred_in_scope": true,
+    "label_alert": true,
+    "pred_alert": true,
+    "pred_level": "medium",
+    "why": "PATHFAST compact immunoanalyzer, marketed for point-of-care and near-patient use",
+    "reasons": [
+     "in scope: company PHC Corporation / PATHFAST",
+     "base fda_510k 0.62",
+     "tracked company +0.1",
+     "follow-up -0.12"
+    ]
+   },
+   {
+    "id": "K222881",
+    "type": "clearance",
+    "date": "2023-12-18",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Beckman Access central-laboratory assay",
+    "reasons": [
+     "out of scope: mentions 'Access hs'"
+    ]
+   },
+   {
+    "id": "K230648",
+    "type": "clearance",
+    "date": "2023-12-04",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Beckman Access central-laboratory assay",
+    "reasons": [
+     "out of scope: mentions 'Access hs'"
+    ]
+   },
+   {
+    "id": "K230994",
+    "type": "clearance",
+    "date": "2023-05-04",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Alinity i STAT central-laboratory assay",
+    "reasons": [
+     "out of scope: mentions 'Alinity i'"
+    ]
+   },
+   {
+    "id": "Z-0727-2025",
+    "type": "recall",
+    "date": "2024-11-18",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "Beckman Access central-laboratory reagent",
+    "reasons": [
+     "out of scope: mentions 'Access hs'"
+    ]
+   },
+   {
+    "id": "Z-1974-2023",
+    "type": "recall",
+    "date": "2023-05-25",
+    "label_in_scope": true,
+    "pred_in_scope": true,
+    "label_alert": true,
+    "pred_alert": true,
+    "pred_level": "medium",
+    "why": "Quidel Triage Cardiac Panel, a point-of-care test",
+    "reasons": [
+     "in scope: company Quidel / Triage",
+     "base fda_recall 0.55",
+     "tracked company +0.1",
+     "follow-up -0.12"
+    ]
+   },
+   {
+    "id": "Z-2357-2023",
+    "type": "recall",
+    "date": "2023-06-05",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "VITROS central-laboratory reagent pack",
+    "reasons": [
+     "out of scope: mentions 'VITROS'"
+    ]
+   },
+   {
+    "id": "Z-2358-2023",
+    "type": "recall",
+    "date": "2023-06-05",
+    "label_in_scope": false,
+    "pred_in_scope": false,
+    "label_alert": false,
+    "pred_alert": false,
+    "pred_level": "noise",
+    "why": "VITROS central-laboratory calibrators",
+    "reasons": [
+     "out of scope: mentions 'VITROS'"
+    ]
+   }
+  ]
+ }
+}
