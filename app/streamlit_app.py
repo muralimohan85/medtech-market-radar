@@ -9,6 +9,7 @@ one in the sidebar to let Claude read news and write sections.
 
 from __future__ import annotations
 
+import inspect
 import sys
 import tempfile
 from datetime import date, timedelta
@@ -687,7 +688,9 @@ def watch_list() -> None:
 
 
 def import_watch() -> None:
-    with st.expander("Import a watch (YAML)", key="import_expander"):
+    # a key keeps the section open across reruns (Streamlit 1.66+; older versions ignore it)
+    kw = {"key": "import_expander"} if "key" in inspect.signature(st.expander).parameters else {}
+    with st.expander("Import a watch (YAML)", **kw):
         st.caption("Restore a brief you downloaded earlier. Hosted apps such as Streamlit Community Cloud lose saved files when "
                    "they restart, so keep a copy of each watch with the Download button below the form.")
         f = st.file_uploader("Watch brief", type=["yaml", "yml"], key="import_yaml", label_visibility="collapsed")
