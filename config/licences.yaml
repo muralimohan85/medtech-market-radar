@@ -1,0 +1,46 @@
+# What each kind of source may be used for. Every fact carries one of these tags.
+#
+# quote:          sentences may reuse the source's own wording
+# export_internal: may appear in Word/PowerPoint/Excel exports marked "internal"
+# export_external: may appear in exports meant for people outside your organisation
+# send_to_model:  may be sent to a hosted model (Claude engine). Turn off if your
+#                 licence forbids third-party processing; those facts are then used
+#                 only by the deterministic engine and appear as structured numbers.
+
+profiles:
+  public:
+    label: Public
+    quote: true
+    export_internal: true
+    export_external: true
+    send_to_model: true
+  public_news:
+    label: Public news
+    quote: true            # short extracts with attribution
+    export_internal: true
+    export_external: true
+    send_to_model: true
+  licensed_no_quote:
+    label: Licensed
+    quote: false
+    export_internal: true
+    export_external: false
+    send_to_model: true
+  upload_internal:
+    label: Your upload
+    quote: true
+    export_internal: true
+    export_external: false
+    send_to_model: true
+  brief:
+    label: Your watch brief
+    quote: true
+    export_internal: true
+    export_external: false
+    send_to_model: true
+  analyst:
+    label: Analyst decision
+    quote: true
+    export_internal: true
+    export_external: true
+    send_to_model: true

@@ -1,0 +1,90 @@
+# How the deterministic engine classifies an item, which report sections it touches,
+# and how material it is. The Claude engine receives the same section list and levels
+# as instructions, so both engines are judged against the same definitions.
+
+sections:
+  summary: "1 Executive summary"
+  market: "2 Market size and growth"
+  segments: "3 Segments, evidence and reimbursement"
+  competition: "4 Competitive landscape"
+  pricing: "5 Pricing"
+  pipeline: "6 Pipeline and trials"
+  regulatory: "7 Regulatory outlook"
+
+# keyword rules for unstructured news, checked in this order; first match wins
+news_kinds:
+  - {kind: clearance, any: ["510(k) clearance", "fda 510(k)", "received fda", "receives fda", "wins fda", "fda cleared", "cleared by the fda", "fda clears", "de novo", "pma approval", "fda approval"]}
+  - {kind: safety, any: ["field safety notice", "field safety corrective", "recall", "safety notice", "falsely low", "falsely elevated"]}
+  - {kind: certification, any: ["ce mark", "ce marking", "ivdr", "cdsco licence", "cdsco approval"]}
+  - {kind: pricing, any: ["per test", "tender", "price", "ceiling price", "reimburse"]}
+  - {kind: funding, any: ["raised", "raises", "series a", "series b", "series c", "funding round"]}
+  - {kind: trial, any: ["enrolment", "enrollment", "pivotal study", "clinical study", "trial"]}
+  - {kind: launch, any: ["launch", "launches", "introduced", "available in"]}
+  - {kind: deal, any: ["distribution agreement", "acquire", "acquisition", "partnership", "partner"]}
+  - {kind: hiring, any: ["hiring", "job opening", "appoints", "vice president"]}
+  - {kind: study, any: ["study", "patients", "sensitivity", "negative predictive value", "meta-analysis"]}
+
+# sections each kind of change touches
+routing:
+  clearance: [competition, regulatory]
+  fda_510k: [competition, regulatory]
+  fda_recall: [competition, regulatory]
+  safety: [competition, regulatory]
+  certification: [competition, regulatory]
+  pricing: [pricing]
+  launch: [competition]
+  deal: [competition]
+  funding: [competition]
+  trial: [pipeline]
+  trial_update: [pipeline]
+  publication_company: [pipeline]
+  publication_general: [segments]
+  study: [pipeline]
+  market_estimate: [market]
+  regional_share: [market]
+  upload: [market, pricing]
+  coverage: [regulatory]
+  patent: []
+  hiring: []
+  other: []
+
+# base materiality by kind (0..1), before adjustments
+materiality:
+  clearance: 0.62
+  fda_510k: 0.62
+  fda_recall: 0.55
+  safety: 0.62
+  certification: 0.5
+  pricing: 0.45
+  launch: 0.45
+  deal: 0.42
+  funding: 0.35
+  trial: 0.42
+  trial_update: 0.42
+  publication_company: 0.42
+  publication_general: 0.32
+  study: 0.32
+  market_estimate: 0.45
+  regional_share: 0.38
+  upload: 0.5
+  coverage: 0.2
+  patent: 0.22
+  hiring: 0.08
+  other: 0.1
+
+adjust:
+  tracked_competitor: 0.1      # a company in the brief
+  new_competitor: 0.05         # a company the agent discovered
+  no_company: -0.05             # not applied to market estimates, which are market-wide by nature
+  first_in_region: 0.2         # e.g. first US clearance among tracked companies
+  follow_up: -0.12             # same company and kind already reported
+  region_outside_brief: -0.2
+
+levels:                        # score thresholds
+  high: 0.7
+  medium: 0.4
+  low: 0.2
+
+dedupe:
+  window_days: 10
+  similarity: 0.35             # TF-IDF cosine on title + text, same company

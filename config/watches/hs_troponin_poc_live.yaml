@@ -1,0 +1,52 @@
+# The same brief pointed at real public data: FDA 510(k) clearances and recalls for
+# product code MMI (troponin assays). Competitors are real companies found in that data.
+# Used by `make live` and by the real-data replay in the evaluation.
+
+id: hs_troponin_poc_live
+name: "hs-Troponin, POC (real FDA data)"
+device_type: Point-of-care immunoassay analyzer
+diagnostic_solution: High-sensitivity cardiac troponin I
+short_name: hs-cTnI
+clinical_use: Ruling heart attack in or out in emergency departments
+regions: [United States]
+
+terms: [hs-cTnI, hs-TnI, high-sensitivity troponin, high sensitivity troponin, troponin, cTnI, TnI, TnIH]
+regulatory_ids:
+  fda_product_codes: [MMI]
+
+scope:
+  include_any: [point-of-care, point of care, i-STAT, Triage, PATHFAST, Stratus, cartridge, whole blood]
+  exclude_any: [central-lab, central laboratory]
+  # central-laboratory analyzer families that share product code MMI
+  exclude_always: [Access hs, Atellica IM, ADVIA, Alinity i, ARCHITECT, Elecsys, VITROS, Dimension, Centaur, AxSYM, UniCel, Tosoh, AIA]
+
+competitors:
+  - name: Abbott Point of Care
+    aliases: [Abbott Point Of Care, i-STAT, APOC]
+  - name: Quidel
+    aliases: [QUIDEL CARDIOVASCULAR, Alere San Diego, Biosite, Triage]
+  - name: PHC Corporation
+    aliases: [Phc Corporation, PATHFAST]
+  - name: Siemens Healthineers (POC)
+    aliases: [Stratus CS]
+
+your_solution:
+  name: "[YOUR PRODUCT]"
+  status: In development
+  us_filing_year: 2027
+
+refresh:
+  report: weekly
+  report_weekday: 0
+cadence:
+  openfda_510k: weekly
+  openfda_recall: weekly
+  clinicaltrials_gov: weekly
+  pubmed: weekly
+  news_rss: daily
+
+digest:
+  recipients: [you@example.com]
+  channel: email_and_in_app
+
+sources: [openfda_510k, openfda_recall, clinicaltrials_gov, pubmed, news_rss]

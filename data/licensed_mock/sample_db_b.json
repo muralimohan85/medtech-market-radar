@@ -1,0 +1,9 @@
+{
+  "_note": "Fictional sample in the shape of a licensed market database export. Not real data.",
+  "vendor": "Sample Market DB B (fictional)",
+  "data": {"items": [
+    {"id": "B-2026-001", "report_title": "Cardiac marker POC tests: market size and forecast", "release_date": "2026-04-01",
+     "geography": "Global", "base_year": 2026, "value_usd_bn": 0.95, "cagr_pct": 8.2, "forecast_period": "2026-2030",
+     "segment": "POC troponin I and T"}
+  ]}
+}

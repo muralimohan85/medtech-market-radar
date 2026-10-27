@@ -1,0 +1,12 @@
+{
+  "_note": "Fictional sample in the shape of a licensed market database export. Not real data.",
+  "vendor": "Sample Market DB A (fictional)",
+  "data": {"items": [
+    {"id": "A-2026-001", "report_title": "Point-of-care troponin testing, global market outlook 2026-2031", "release_date": "2026-04-01",
+     "geography": "Global", "base_year": 2026, "value_usd_bn": 1.15, "cagr_pct": 10.8, "forecast_period": "2026-2031",
+     "segment": "POC cardiac troponin (hs and contemporary)"},
+    {"id": "A-2026-002", "report_title": "Point-of-care troponin testing, global market outlook: Q3 update", "release_date": "2026-09-15",
+     "geography": "Global", "base_year": 2026, "value_usd_bn": 1.15, "cagr_pct": 11.0, "forecast_period": "2026-2031",
+     "segment": "POC cardiac troponin (hs and contemporary)"}
+  ]}
+}

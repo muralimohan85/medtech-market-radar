@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+.env
+# databases, uploads, digests and exports: may hold licensed or private material
+workspace/
+data/raw/
+data/uploads/
+*.db

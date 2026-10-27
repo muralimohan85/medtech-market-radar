@@ -1,0 +1,55 @@
+# A watch brief: what the agent researches and keeps up to date.
+# This one drives the fictional demo scenario. See hs_troponin_poc_live.yaml for the
+# same brief on real public data.
+
+id: hs_troponin_poc
+name: "hs-Troponin, POC"
+device_type: Point-of-care immunoassay analyzer
+diagnostic_solution: High-sensitivity cardiac troponin I
+short_name: hs-cTnI
+clinical_use: Ruling heart attack in or out in emergency departments
+regions: [United States, European Union, India]
+
+terms: [hs-cTnI, high-sensitivity troponin, troponin, POC troponin, point-of-care troponin, near-patient testing, 0/1-hour algorithm, cTnI]
+regulatory_ids:
+  fda_product_codes: [MMI]
+  emdn: ["W (IVD)"]
+
+scope:
+  # an item is in scope when it mentions a term above and at least one of these ...
+  include_any: [point-of-care, point of care, POC, handheld, whole blood, whole-blood, near-patient, cartridge, rapid test, i-STAT, Triage, PATHFAST, Stratus]
+  # ... and none of these
+  exclude_any: [central-lab, central lab, central laboratory, central-laboratory, high-throughput analyzer, troponin T research, marathon, athletes, sports cardiolog]
+
+competitors:
+  - name: Kestrel Diagnostics
+    aliases: [Kestrel, K-Point]
+  - name: Norvia Medical
+    aliases: [Norvia, Norvia QT]
+  - name: Altamira Bio
+    aliases: [Altamira]
+
+your_solution:
+  name: "[YOUR PRODUCT]"
+  status: CE marked under IVDR; US 510(k) filing planned for 2027
+  us_filing_year: 2027
+
+refresh:
+  report: weekly          # full report refresh day: Monday
+  report_weekday: 0
+cadence:                  # how often each source is checked
+  news_rss: daily
+  openfda_510k: weekly
+  openfda_recall: weekly
+  clinicaltrials_gov: weekly
+  pubmed: weekly
+  patents: monthly
+  licensed_db_a: monthly
+  licensed_db_b: monthly
+  upload: immediate
+
+digest:
+  recipients: [you@example.com, strategy-team@example.com]
+  channel: email_and_in_app
+
+sources: [news_rss, openfda_510k, openfda_recall, clinicaltrials_gov, pubmed, patents, licensed_db_a, licensed_db_b, upload]

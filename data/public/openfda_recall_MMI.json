@@ -1,0 +1,1025 @@
+{
+ "meta": {
+  "source": "openFDA (api.fda.gov), public domain US government data",
+  "fetched": "2026-10-27",
+  "query": "product_code:MMI"
+ },
+ "results": [
+  {
+   "product_res_number": "Z-0032-2022",
+   "event_date_initiated": "2021-08-09",
+   "event_date_posted": null,
+   "recall_status": "Open, Classified",
+   "res_event_number": "88559",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K172783",
+    "K172787"
+   ],
+   "product_description": "Access hsTnI High Sensitivity Troponin I, REF B52699\n\nAccess Immunoassay System REAGENT PACK",
+   "reason_for_recall": "Through customer feedback, testing a sample with cardiac troponin I concentration that are >270,000 pg/mL may cause carryover into the hsTnl reagent pack.  The carryover is caused by sample-to-pack carryover predominantly into the particle well of the reagent pack by way of the probe. The particle well then becomes contaminated by the high sample from the probe. The extent of the carryover is dependent on sample concentration and frequency of high concentration samples.",
+   "root_cause_description": "Unknown/Undetermined by firm",
+   "action": "During the week of 08/09/2021, the firm sent an \"URGENT MEDICAL DEVICE RECALL\" Notification Letter via mail or email informing customer of possible carryover with in-use, open (punctured) hsTnI reagent packs, and the impact of carryover on patient samples that are tested from the same reagent pack as a sample with a high cardiac troponin (cTnI) concentration >270,000 pg/mL (ng/L), or the carryover may also impact a different reagent pack.  Clinical carryover can affect the results of all subsequent samples that are tested from the affected pack.\n\nCustomer are instructed to:\n- If an hsTnI result >270,000 pg/mL (ng/L) are observed, perform the following steps:\n1. Remove and discard all open Access hsTnI reagent packs.\nFor customers in the United States, if replacement products are needed, complete the attached  Replacement Order Form  and email to askbeckman@beckman.com or fax to (866) 294-7850 OR Call Client Services at (800) 526-3821.\n2. Load a single Access hsTnI reagent pack.\n3. Run the current low level hsTnI QC on all reagent pipettors configured for hsTnI to verify that there is no further carryover.\nNOTE: UniCel DxI operators can test all configured reagent pipettors by setting up a QC file as outlined in Appendix A (included with the recall notice).\n4. If the QC result is within the laboratory s defined ranges for each pipettor configured, repeat each positive hsTnI sample that was tested after the >270,000 pg/mL (ng/L) cTnI sample and then continue normal operation. Load additional reagent packs if it is appropriate for the laboratory s testing requirements.\n5. If the QC result are not within the acceptable range, contact the Recalling Firm's Customer Technical Support for further assistance.\n\nAdditional instructions:\n - Download the most current version of the hsTnI reagent -nstructions for Use (IFU) from the Recalling Firm's website. Update laboratory procedures as appropriate.\n-Share this information with laboratory staff and retain this not",
+   "recalling_firm": "Beckman Coulter Inc.",
+   "product_quantity": "293,640 kits",
+   "distribution_pattern": "U.S.: AL, AR, AZ, CA, CO, CT, DE, DC, FL, GA, Guam, HI, IA, ID, IL, IN, KS, KY, LA, ME, MD, MI, MN, MS, MO, NC, ND, NE, NV, NJ, NY, OH, OK, OR, PA, Puerto Rico, RI, SC, SD, TN, TX, VA, WA, WI, WV, and WY \n\nO.U.S.:  Algeria, Andorra, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brazil, Brunei, Bulgaria, Canada, China, Croatia, Cura\u00bfao, Czech Republic, Denmark, Egypt, Estonia, Ethiopia, Finland, France, Georgia, Germany, Ghana, Gibraltar, Greece, Hong Kong, Hungary, India, Ireland, Israel, Italy, Japan, Jordan, Kazakhstan, Kenya, Kuwait, Lebanon, Libya, Lithuania, Malaysia, Mayotte, Mexico, Morocco, Myanmar, Namibia, Nepal, Netherlands, New Zealand, Niger, Nigeria, Norway, Oman, Philippines, Poland, Portugal, Puerto Rico, Qatar, Romania, Russia, San Marino, Saudi Arabia, Serbia, Singapore, Slovakia, Slovenia, South Africa, South Korea, Spain, Sri Lanka, Swaziland, Switzerland, Taiwan, Thailand, Tunisia, Turkey, United Arab Emirates, United Kingdom, Vietnam, Yemen, and Zimbabwe"
+  },
+  {
+   "product_res_number": "Z-0052-2021",
+   "event_date_initiated": "2020-08-19",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "86374",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K190675"
+   ],
+   "product_description": "Dimension LOCI High Sensitivity Troponin I (TNIH) Flex reagent cartridge-IVD-In vitro diagnostic use in the\nquantitative measurement of cardiac troponin I in human plasma Catalog Number: RF627, SMN# 10471068",
+   "reason_for_recall": "Positive bias across the Analytical Measurement Range of the TNIH assay compared to an unaffected control lot. The average bias observed for\npatient samples using lots EB0255 and EA0178 of the Dimension EXL Troponin compared with a control lot was +25%. A maximum bias of +34% in patient samples around the 99th percentile observed",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "Siemens issued Urgent Medical Device Correction (UMDC # VC-20-03.B.US) and Urgent Field Safety Notice (UFSN # VC-20-03.B.OUS)  issued on August 19, 2020 via FedX to US Dimension customers who received the Dimension TNIH reagent lot to notify them of the issue, the risk to health, and the following actions to be taken by the customer:\nReview the letter with their Medical Director\"If they are using TNIH lot EB0255 DO NOT switch to another TNIH lot during serial measurements for a single patient sample.\nDiscontinue use and discard the TNIH reagent lot EB0255 upon receipt of replacement product.\nRequest your no-charge replacement for lot EB0255.\nComplete and return the Field Correction Effectiveness Check Form attached to the letter within 30 days.\nQuestions, contact your Siemens Remote Services Center or your local Siemens Technical Support representative.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "533 US and 1822 OUS",
+   "distribution_pattern": "US Nationwide distribution."
+  },
+  {
+   "product_res_number": "Z-0180-2012",
+   "event_date_initiated": "2011-09-29",
+   "event_date_posted": "2011-11-10",
+   "recall_status": "Terminated",
+   "res_event_number": "60048",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031739"
+   ],
+   "product_description": "i-Stat cTnI cartridges\n\nIs an in vitro diagnostic test for the quantitative measurement of cardiac troponin I in heparinized whole blood or plasma samples.",
+   "reason_for_recall": "i-Stat cTnI cartridges beginning with letter \"T\" may exhibit a higher than expected variability in reported results.  This increased variability may result in falsely elevated or falsely depressed results.",
+   "root_cause_description": "Material/Component Contamination",
+   "action": "APOC issued Urgent Recall Notices/Business Reply Forms dated September 2011 to consignees.  The letter identified the affected product and explained the background of the problem.  Customers are to discontinue use of the cartridges from the lots identified.  All unused product will be credited and should be returned as instructed on the attached Business Reply Card.  If the affected product was further distributed, a copy of the Recall Notice should be provided to those customers as well.  APOC shipped replacement product in order to minimize any disruption.  If replacement product has not been received then customers should contact Customer Service at 1-800-366-8020, option 5.  Questions regarding this information should be directed to Abbott Point of Care Technical Support at 800-366-8020, Option 1 or customers' local APOC representative.",
+   "recalling_firm": "Abbott Point Of Care Inc.",
+   "product_quantity": "1,688,755 cartridges",
+   "distribution_pattern": "Worldwide Distribution"
+  },
+  {
+   "product_res_number": "Z-0460-2011",
+   "event_date_initiated": "2010-04-12",
+   "event_date_posted": "2010-11-24",
+   "recall_status": "Terminated",
+   "res_event_number": "55604",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K081643"
+   ],
+   "product_description": "The Dimension TNI Flex reagent cartridge (Cardiac Troponin), manufactured by Siemens Healthcare Diagnostics, Inc., Newark, DE.",
+   "reason_for_recall": "Some LOCI cartridges have sub-optimal seal of the lidstock that can cause rupture of the package at high elevations, causing the cartridge to leak. Use of leaking cartridges may result in inaccurate test results.",
+   "root_cause_description": "Other",
+   "action": "Siemens issued an \"Urgent Field Safety Notice\" dated April 2010, informing users of the problem and instructing them to inspect cartridges for leaking fluid. Cartridges with leaking fluid should be reported to the Siemens Technical Solutions Center. The Technical Solutions Center can be contacted at 800 441 9250.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "4966",
+   "distribution_pattern": "Worldwide Distribution: USA, Europe, Australia, China, Japan, Korea, and Saudi Arabia."
+  },
+  {
+   "product_res_number": "Z-0512-06",
+   "event_date_initiated": "2006-01-31",
+   "event_date_posted": "2006-02-09",
+   "recall_status": "Terminated",
+   "res_event_number": "34491",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K040733",
+    "K051752",
+    "K984105"
+   ],
+   "product_description": "Roche brand Elecsys Troponin T; catalog number 2017644.",
+   "reason_for_recall": "A false negative result may be reported.",
+   "root_cause_description": "Other",
+   "action": "Recall letter dated 1/31/06 was issued to each customer instructing them to stop using, and to discard, the product.",
+   "recalling_firm": "Roche Diagnostics Corp.",
+   "product_quantity": "3116 kits",
+   "distribution_pattern": "Nationwide."
+  },
+  {
+   "product_res_number": "Z-0513-06",
+   "event_date_initiated": "2005-12-21",
+   "event_date_posted": "2006-02-14",
+   "recall_status": "Terminated",
+   "res_event_number": "34297",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K041192"
+   ],
+   "product_description": "ARCHITECT STAT Troponin-I Reagent Kit, list 2K41-20; each 400 test kit contains 4 bottles each of microparticles, conjugate and assay diluent; Abbott Laboratories, Abbott Park, IL 60064",
+   "reason_for_recall": "There has been an increase in customer complaints observed for failure to calibrate or inability to generate patient result errors.",
+   "root_cause_description": "Other",
+   "action": "Abbott sent recall letters dated 12/20/05 to the laboratory accounts via Federal Express Priority on 12/21/05. The accounts were informed of the increase in customer complaints for failure to calibrate or inability to generate patient result errors for the Troponin-I Reagent lot, and were requested to discontinue use and destroy any of the affected lot found in inventory for replacement.",
+   "recalling_firm": "Abbott Laboratories MPG",
+   "product_quantity": "181 kits",
+   "distribution_pattern": "Nationwide and internationally to Canada, Australia, Germany and Taiwan"
+  },
+  {
+   "product_res_number": "Z-0580-2008",
+   "event_date_initiated": "2007-06-07",
+   "event_date_posted": "2008-06-05",
+   "recall_status": "Terminated",
+   "res_event_number": "44725",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K053020"
+   ],
+   "product_description": "ADVIA Centaur TnI-Ultra Assay, Troponin Immunoassay, 500 tests - Part/Catalog # 02790309, and 100 tests - Part/Catalog # 02789602. For in vitro diagnostic use, Siemens Medical Solutions Diagnostics, Tarrytown, NY 10591",
+   "reason_for_recall": "Incorrect results: Falsely elevated Troponin values have been reported which are inconsistent with the patient's clinical picture and test negative by other Troponin assays.",
+   "root_cause_description": "Material/Component Contamination",
+   "action": "Two Support Bulletins (078N0361-01 & 078N0361-02) were sent by e-mail to all affected Siemens Diagnostics Branches to inform them of this issue. The first one was sent on 6/07/07 and the second one was sent on 7/05/07. Two Customer Bulletins (078D0647-01 & 078D0651-01) were sent by e-mail to the Siemens Diagnostics Branches for communication with the affected customers. The first one was sent on 6/07/07 and the second one was sent on 7/05/07. These bulletins state that if a false positive is suspected, the sample should be diluted and retested.",
+   "recalling_firm": "Siemens Medical Solutions Diagnostics",
+   "product_quantity": "Domestic: 31,497 kits; Foreign: 27,321 kits",
+   "distribution_pattern": "Worldwide Distribution - USA, Argentina, Austria, Australia, Brazil, Canada, Chile, Colombia, Egypt, France, Germany, Greece, Hong Kong, India, Israel, Italy, Malaysia, Morocco, Netherlands, New Zealand, Norway, Peru, Poland, Portugal, Saudi Arabia, Singapore, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, Turkey, United Arab Emirates, United Kingdom, Uruguay, and Venezuela"
+  },
+  {
+   "product_res_number": "Z-0609-2016",
+   "event_date_initiated": "2015-11-11",
+   "event_date_posted": "2016-01-07",
+   "recall_status": "Terminated",
+   "res_event_number": "72570",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K051650"
+   ],
+   "product_description": "Siemens Acute Care  CTNI TestPak-in vitro diagnostic test for the measurement of cardiac troponin I in heparinized plasma\nCatalog Number: CCTNI\nSMN: 10445071",
+   "reason_for_recall": "Stratus CS Cartridge Barcode labels may not scan on the Stratus CS systems",
+   "root_cause_description": "Labeling design",
+   "action": "Siemens Healthcare  Diagnostics issued  an Urgent Field Safety Notice by e-mail to all affected Siemens Healthcare Diagnostics Regional offices on November 11, 2015 both in the United States and internationally  for communication with affected customers. This notice informs customers of the issue and provides mitigation instructions.  Customers with questions were advised to contact their Siemens Customer Care Center or their local Siemens technical support representative.  For questions regarding call 781-269-3000.",
+   "recalling_firm": "Siemens Healthcare Diagnostics Inc",
+   "product_quantity": "5558",
+   "distribution_pattern": "Worldwide Distribution - US (nationwide), Algeria, Armenia, Australia, Austria, Bangladesh, Bosnia Herzegovina, Canada, Croatia, Czech Republic, Denmark, Finland, France, Germany, Greece, India, Ireland, Italy, Japan, Libya, Malaysia, Poland, Portugal, Romania, Saudi Arabia, Slovenia, South Africa, Spain, Sweden, Switzerland, Taiwan, Turkey, U.A.E., and United Kingdom."
+  },
+  {
+   "product_res_number": "Z-0716-2013",
+   "event_date_initiated": "2012-11-01",
+   "event_date_posted": "2013-01-24",
+   "recall_status": "Terminated",
+   "res_event_number": "64043",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031739"
+   ],
+   "product_description": "Abbott Point of Care i-Stat cTnI cartridge.\n\nThe i-Stat cardiac troponin I (cTnI) test is an in vitro diagnostic test for the quantitive measurement of cardiac troponin I (cTnI) in whole blood or plasma. Measurements of cardiac troponin I are used in the diagnosis and treatment of myocardial infarction and as an aid in the risk stratification of patients with acute coronary syndromes with respect to the relative risk of mortality.",
+   "reason_for_recall": "APOC has determined that 10 boxes of i-Stat cTnI cartridges from lot P12179 have an incorrect barcode applied to the cartridge portion pack.",
+   "root_cause_description": "Error in labeling",
+   "action": "APOC sent an \"IMPORTANT PRODUCT INFORMATION\" letter dated October 2012 to all affected customers.  The letter identified the product, problem, and actions to be taken by the customers.  Contact Abbott Point Of Care Technical Support at 800-366-8020, Option 1 or your Abbott Point Of Care representative for questions regarding this information.",
+   "recalling_firm": "Abbott Point of Care Canada Limited",
+   "product_quantity": "560 boxes (25 cartridges in each box)",
+   "distribution_pattern": "Worldwide Distribution."
+  },
+  {
+   "product_res_number": "Z-0727-2025",
+   "event_date_initiated": "2024-11-18",
+   "event_date_posted": "2024-12-20",
+   "recall_status": "Open, Classified",
+   "res_event_number": "95816",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K121214",
+    "K172783",
+    "K222881",
+    "K230648"
+   ],
+   "product_description": "Access hsTnI Reagent, REF B52699, Immunoassay Method, Troponin Subunit.\nFor the quantitative determination of cardiac troponin I (cTnI) levels in human serum and plasma.",
+   "reason_for_recall": "Beckman Coulter, Inc. is recalling their Access hsTnI assay, a medical device by correction. The reason for the recall is: high troponin antigen (>55,000 pg/mL) can contaminate an analyzers probe and cause inter-assay carryover due to insufficient washing. The contamination can cause a falsely elevated Access hsTnI result in subsequent sample(s) which can impact patient care (potentially but not limited to unnecessary coronary imaging or diagnostic catheterization) if the result is near the medical decision points.",
+   "root_cause_description": "Component design/selection",
+   "action": "Beckman Coulter issued an URGENT MEDICAL DEVICE RECALL notice to its consignees on 11/18/2024 via USPS and email.  The notice explained the issue, impact to patient care, and requested the following actions be taken:  \n\" - Follow your established laboratory protocols for analyzing and retesting discrepant samples if an observed Access hsTnI test result does not align with the patient s clinical presentation.\n - Beckman Coulter recommends reviewing the content of this letter with your laboratory and/or medical director to determine appropriate next steps.\nPlease share this information with your laboratory staff and retain this notification as part of your laboratory Quality System documentation. If you have forwarded the affected product listed above to another laboratory, please provide them a copy of this letter.\"",
+   "recalling_firm": "Beckman Coulter, Inc.",
+   "product_quantity": "2,109,804 units",
+   "distribution_pattern": "Worldwide"
+  },
+  {
+   "product_res_number": "Z-0761-2020",
+   "event_date_initiated": "2019-10-16",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "84166",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031739",
+    "K051433"
+   ],
+   "product_description": "i-STAT cTnI cartridge",
+   "reason_for_recall": "i-STAT cTnI blue cartridges may generate a higher than expected number of quality check codes. The observed rate of quality check codes could be in the 3 to 5% range.",
+   "root_cause_description": "Device Design",
+   "action": "On October 16, 2019 the firm distributed Urgent Medical Device Recall Communication letters by mail.  It explains Abbott Point of Care has made the decision to transition U.S. customers using the i-STAT cTnI blue cartridge, list number 06P23-25, to the i-STAT cTnI white cartridge, list number 03P90-25, beginning in November 2019. The i-STAT cTnI blue cartridge, list number 06P23-25, will be discontinued for sale in the United States as of January 1, 2020. \n\nIt further explains to customers while the i-STAT cTnI blue cartridges can continue to be used for patient testing, APOC recommends that all users of the i-STAT System be informed of the possibility of a higher than expected number of quality check codes while using the i-STAT cTnI blue cartridge and maintain a validated alternate backup method until the i-STAT cTnI white cartridges are received.\n\nYour Abbott Point of Care representative will contact you to discuss the details and timing of this transition for your facility.\n\nIf your facility repeatedly observes the i-STAT cTnI blue cartridges from a single lot generating a higher than expected number of QCCs, please contact APOC Technical Services for support and to report the information.\n\nIf you have forwarded any i-STAT cTnI blue cartridges to another facility, please provide a copy of this letter to them.\n\nADDITIONAL INFORMATION\nIf you have any questions regarding this information, please contact Abbott Point of Care Technical Support at 1-866-324-8114, or via email at apoc_cTnIproductinfo@abbott.com or contact your Abbott Point of Care support services representative.\n\nWe appreciate your understanding in this matter and thank you for your continued support of Abbott and Abbott products.",
+   "recalling_firm": "Abbott Point Of Care Inc.",
+   "product_quantity": "3,465,875",
+   "distribution_pattern": "US: AK AL AZ CA CT DC FL GA HI IL IN KS KY MD MI MS NC NE NH NM NV NY OH OK OR PA SC SD TN TX VA WA WV WY"
+  },
+  {
+   "product_res_number": "Z-0782-04",
+   "event_date_initiated": "2004-03-26",
+   "event_date_posted": "2004-07-20",
+   "recall_status": "Terminated",
+   "res_event_number": "28649",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K974103"
+   ],
+   "product_description": "AxSYM Troponin-I Reagent Kit, list 3C29-20, 100 test kit; Abbott Laboratories, Abbott Park, IL 60064",
+   "reason_for_recall": "An increase in complaints of higher than normal patient results, some from the healthy population range to above the diagnostic cutoff for an Acute Myocardial Infarction.",
+   "root_cause_description": "Other",
+   "action": "Recalled by telephone calls on 3/26/04 and a follow-up letter dated 3/25/04. The accounts were informed of the elevated patient results for the Troponin-I Reagent lots, and were requested to discontinue use and destroy any of the four affected lots found in inventory.",
+   "recalling_firm": "Abbott Laboratories HPD/ADD/GPRD",
+   "product_quantity": "7,394 kits",
+   "distribution_pattern": "Nationwide and internationally to Abbott affiliates in Argentina, Canada, Germany, Singapore, Hong Kong, \nTaiwan, Australia, New Zealand, Thailand, China and Korea."
+  },
+  {
+   "product_res_number": "Z-0801-2015",
+   "event_date_initiated": "2014-10-27",
+   "event_date_posted": "2014-12-12",
+   "recall_status": "Terminated",
+   "res_event_number": "69718",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K991795"
+   ],
+   "product_description": "Turbo Troponin I\n\nFor in vitro diagnostic use for the quantitative measurement of troponin I in serum, heparinized or EDTA plasma, as an aid in the diagnosis of acute myocardial infarction (AMI).",
+   "reason_for_recall": "",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "The firm, Siemens, sent an \"Urgent Medical Device Recall\" letter dated October 27, 2014 to its customers.  The letter described the product, problem and actions to be taken.  The customers were instructed to discontinue use of and discard the kit lots listed;  review this letter with your Medical Director, complete and return the Field Correction Effectiveness Check attached to this letter within 7 days via fax to: the Customer Care Center at (312) 275-7795; report any complaints or AE associated with the product to your local Siemens Customer Care Center or your local Siemens technical support representative; contact your local Siemens technical support representative to discuss alternative Siemens solutions; retain this letter with your laboratory records, and forward this letter to those who may have received this product.\n\nIf you have any questions, contact your local Siemens technical support representative or 914-524-3074.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "3,622 kits (3,572 domestic and 50 internationally)",
+   "distribution_pattern": "Worldwide Distribution: US distribution in states of: CO, FL, MN, MT,  and NY; and countries of: Algeria, Argentina, Bolivia, Brazil, Bulgaria, Chile, Columbia, Czech Republic, Ecuador, Egypt, Germany, Hungary, India,  Italy, Lithuania, Latvia, Pakistan, Poland, Romania, Russian Fed., Serbia,  South Africa, Slovakia, Thailand, Tunisia, and Uruguay."
+  },
+  {
+   "product_res_number": "Z-0820-2007",
+   "event_date_initiated": "2007-04-27",
+   "event_date_posted": "2007-05-26",
+   "recall_status": "Terminated",
+   "res_event_number": "37873",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031031"
+   ],
+   "product_description": "VITROS Immunodiagnostic Products Troponin I Reagent Pack, REF/Catalog No. 194 9882. A Troponin Immunoassay Method, IVD. Ortho-Clinical Diagnostics, Amersham UK",
+   "reason_for_recall": "Quality control and patient results can be lower than expected when the true Troponin I value is less than or equal to 0.2 ng/mL which may result in the device failing to detect myocardial injury.",
+   "root_cause_description": "Nonconforming Material/Component",
+   "action": "On 4/27/07, Ortho-Clinical Diagnostics in Rochester, NY, notified the end users of the recall of the product by phone, fax, and FedEx overnight letter. Clinical labs in possession of these lots have been contacted by OCD, and were instructed to (a) discontinue use of this product and (b) notify healthcare providers who ordered the test in recent weeks. Replacement product has been provided to clinical labs with the affected product lots. Clinical laboratories with questions may contact the company at 1-800-421-3311. On 4/27/07, OCD foreign affiliates were informed of this action by e-mail and instructed to inform their customers who received these reagent packs of this issue. Ortho-Clinical Diagnostics in Raritan, NJ, issued a nationwide press release on 5/04/07.",
+   "recalling_firm": "Ortho-Clinical Diagnostics",
+   "product_quantity": "Lot 3151: 1,750 units, Lot 3170: 3,316 units",
+   "distribution_pattern": "Worldwide-including USA, Canada, and Bermuda"
+  },
+  {
+   "product_res_number": "Z-0855-2007",
+   "event_date_initiated": "2007-03-08",
+   "event_date_posted": "2007-06-14",
+   "recall_status": "Terminated",
+   "res_event_number": "37570",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K041192"
+   ],
+   "product_description": "ARCHITECT STAT Troponin-I Reagent; list numbers 2K41-20 (400 test kit), 2K41-25 (100 test kit) and 2K41-30 (2000 test kit); each kit contains bottles of microparticles, conjugate and assay diluent; Abbott Laboratories, Abbott Park, IL 60064",
+   "reason_for_recall": "False Negative Results : The analytical sensitivity claim of less than or equal to 0.01 ng/mL (ug/L) might not be met for all lots of Architect STAT Troponin-I reagents, thus false negative results may occur with negative results less than 0.1 ng/mL",
+   "root_cause_description": "Other",
+   "action": "Abbott sent a Product Correction letter on 3/8/07 to all Troponin-I customers who received reagent lots in the last 12 months.  The letters informed the accounts that the analytical sensitivity claim of = 0.01 ng/mL might not be met for all lots of Architect STAT Troponin-I reagents.  The accounts were directed to evaluate the information the information provided in the letter against the reference range used in their laboratory to determine if any action needs to be taken; to follow their facility's policies and procedures for communicating with the heath care providers they serve; to forward a copy of the letter to any laboratory to whom they may have forwarded the reagent; and to retain a copy of the letter for their records.  Any questions were directed to Abbott Customer Support at 1-877-4ABBOTT in the U.S.  A follow-up press release was issued on 5/25/07 and a follow-up letter was issued on 5/29/07, providing updated instructions for laboratories to follow when using the product.",
+   "recalling_firm": "Abbott Laboratories MPG",
+   "product_quantity": "9,438 kits",
+   "distribution_pattern": "Worldwide: USA including Puerto Rico, and internationally to Canada, Brazil, Germany, Japan, Taiwan, Hong Kong, Thailand, South Korea, Australia, New Zealand, Mexico, Colombia, Chile, Argentina and Trindad & Tobago."
+  },
+  {
+   "product_res_number": "Z-0858-2010",
+   "event_date_initiated": "2007-03-02",
+   "event_date_posted": "2010-02-25",
+   "recall_status": "Terminated",
+   "res_event_number": "53026",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K010313"
+   ],
+   "product_description": "Dimension Flex Reagent Cartridge Cardiac Tropinin-I, Catalog Number: RF421C and RF521.\n\nIntended to quantitatively measure cardiac troponin-I levels in human serum and heparinized plasma to aid in the diagnosis of myocardial infarction and in the risk stratification of patients with acute coronary syndromes with respect to their relative risk or mortality.",
+   "reason_for_recall": "Tests exhibit falsely elevated results.",
+   "root_cause_description": "Material/Component Contamination",
+   "action": "The recalling firm issued a Field Correction letter dated 3/2/07 informing user of the problem and to contact the firm at 800-241-0420 for replacements.  Customers are to follow the precautions provided in the letter.  Questions should be directed to Dade Behring Technical Assistance Center at 800-441-9250.  The notification should be forwarded to anyone to whom the product may have been further distributed to.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "9767 cartons",
+   "distribution_pattern": "Worldwide Distribution -- USA, Canada, Germany, Egypt, New Zealand, Saudi Arabia, Singapore, and BS."
+  },
+  {
+   "product_res_number": "Z-0870-03",
+   "event_date_initiated": "2003-04-25",
+   "event_date_posted": "2003-05-29",
+   "recall_status": "Terminated",
+   "res_event_number": "26091",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K984105"
+   ],
+   "product_description": "Elecsys Troponin T; catalog number 2017644",
+   "reason_for_recall": "Hemoglobin interference limitation revised downward; hemolyzed samples may result in false negative results.",
+   "root_cause_description": "Other",
+   "action": "An Urgent Product Correction letter was mailed to each account, during the week of 4/21/03, advising them not to use hemolyzed specimens with a hemoglobin level equal to, or greater than, 0.1 g/dL.",
+   "recalling_firm": "Roche Diagnostics Corp.",
+   "product_quantity": null,
+   "distribution_pattern": "United States"
+  },
+  {
+   "product_res_number": "Z-0871-03",
+   "event_date_initiated": "2003-04-25",
+   "event_date_posted": "2003-05-29",
+   "recall_status": "Terminated",
+   "res_event_number": "26091",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K984104"
+   ],
+   "product_description": "Elecsys Troponin T STAT; catalog number 2017423",
+   "reason_for_recall": "Hemoglobin interference limitation revised downward; hemolyzed samples may result in false negative results.",
+   "root_cause_description": "Other",
+   "action": "An Urgent Product Correction letter was mailed to each account, during the week of 4/21/03, advising them not to use hemolyzed specimens with a hemoglobin level equal to, or greater than, 0.1 g/dL.",
+   "recalling_firm": "Roche Diagnostics Corp.",
+   "product_quantity": null,
+   "distribution_pattern": "United States"
+  },
+  {
+   "product_res_number": "Z-0876-06",
+   "event_date_initiated": "2006-04-03",
+   "event_date_posted": "2006-05-19",
+   "recall_status": "Terminated",
+   "res_event_number": "35112",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K033487"
+   ],
+   "product_description": "Stratus CS STAT Fluorometric Analyzer Acute Care cTnI TestPak (CCTNI) in vitro diagnostic.",
+   "reason_for_recall": "Foil sealing of the TestPak may occlude the pipet tip resulting in insufficient aspiration of fluids.  Erroneous test results may be generated without an associated error code.  Test results may be falsely elevated or depressed, and the magnitude of the inaccuracy may vary based on the degree of occlusion.",
+   "root_cause_description": "Other",
+   "action": "Customers were provided clear written instructions (04/06/2006) to discontinue use and discard remaining inventory of products over 2 months old.  In addition, each customer is being contacted by phone as an effectiveness verification.  Recalling firm is also instructing Stratus CS customers to process all samples and dilutions in duplicate.",
+   "recalling_firm": "Dade Behring , Inc.",
+   "product_quantity": "10843 cartons of 100 TestPaks",
+   "distribution_pattern": "Nationwide to hospitals and government accounts in addition to International accounts in Canada, Saudi Arabia, Bangladesh, UAE, India, Japan, Denmark,  and Australia."
+  },
+  {
+   "product_res_number": "Z-0882-06",
+   "event_date_initiated": "2006-04-03",
+   "event_date_posted": "2006-05-19",
+   "recall_status": "Terminated",
+   "res_event_number": "35112",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K981098"
+   ],
+   "product_description": "Stratus CS STAT Fluorometric Analyzer cTnI DilPak (CCTNI-D) in vitro diagnostic.",
+   "reason_for_recall": "Foil sealing of the DilPak may occlude the pipet tip resulting in insufficient aspiration of fluids.  Erroneous test results may be generated without an associated error code.   Test results may be falsely elevated or depressed, and the magnitude of the inaccuracy may vary based on the degree of occlusion.",
+   "root_cause_description": "Other",
+   "action": "Customers were provided clear written instructions (04/06/2006) to discontinue use and discard remaining inventory of products over 2 months old.  In addition, each customer is being contacted by phone as an effectiveness verification.  Recalling firm is also instructing Stratus CS customers to process all samples and dilutions in duplicate.",
+   "recalling_firm": "Dade Behring , Inc.",
+   "product_quantity": "358 cartons of 5 DilPaks",
+   "distribution_pattern": "Nationwide to hospitals and government accounts in addition to International accounts in Canada, Saudi Arabia, Bangladesh, UAE, India, Japan, Denmark,  and Australia."
+  },
+  {
+   "product_res_number": "Z-1023-2007",
+   "event_date_initiated": "2007-04-23",
+   "event_date_posted": "2007-07-11",
+   "recall_status": "Terminated",
+   "res_event_number": "37887",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K041811"
+   ],
+   "product_description": "AxSYM Troponin-I ADV Reagent Pack; list 02J44; 100 test pack; in-vitro diagnostic;  Abbott Laboratories, Abbott Park, IL 60064",
+   "reason_for_recall": "Failure of the AxSYM instrument to open (actuate) some reagent packs from certain lots.  The defects can result in probe crashes if not detected prior to placement of the reagent kit on the AxYM instrument.",
+   "root_cause_description": "Other",
+   "action": "Abbott initiated a field correction recall by letter dated 4/23/07 to all customers receiving the affected reagents. The accounts were informed of the failure of the AxSYM to open (actuate) some reagent packs with the affected lots. The accounts were requested to inspect each reagent pack for broken or improperly sealed caps; manually open each bottle to ensure the flipper bar raises the reagent cap correctly; close each flipper bar prior to loading the reagent pack on the instrument; and discard any reagent packs that do not open properly.  If the user observes a probe crash, prior to testing samples again, the user must perform a probe crash recovery following the procedure in the Operations Manual.  If necessary, they need to replace the probe. If a probe crash recovery is not performed, subsequent results may be impacted.  The customers were requested to retain a copy of the letter for their records. Customers requiring additional information were directed to contact Abbott Customer Service at 1-877-422-2688.",
+   "recalling_firm": "Abbott Laboratories",
+   "product_quantity": "9,277 packs",
+   "distribution_pattern": "Worldwide, including USA, Puerto Rico, Argentina, Australia, Brazil, Canada, Cayman Islands, Chile, Colombia, Ecuador, Germany, Hong Kong, Mexico, New Zealand, Singapore, South Korea, Taiwan, Thailand and Venezuela."
+  },
+  {
+   "product_res_number": "Z-1051-2009",
+   "event_date_initiated": "2009-01-19",
+   "event_date_posted": "2009-04-15",
+   "recall_status": "Terminated",
+   "res_event_number": "50816",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K060875"
+   ],
+   "product_description": "AxSYM Troponin-I ADV Reagent Pack, Abbott Laboratories, Abbott Park, IL 60064; AxSYM Troponin-I ADV is a Microparticle Enzyme Immunoassay (MEIA) for the quantitative determination of cardiac troponin-I (cTnI) in human serum or plasma on the AxSYM System; list 2J44-22",
+   "reason_for_recall": "Defective caps: Customers have observed reagent bottles not opening appropriately, which could lead to a probe crash on the instrument.",
+   "root_cause_description": "Employee error",
+   "action": "Consignees were sent a Product Correction-Immediate Action Required letter on 1/19/09. The letter informed users of the reported increased frequency of probe crashes when using the affected reagent pack lots and provided instructions on what actions the laboratory can take if they have a defective reagent pack or experience a probe crash with their system.  Users need to inspect each reagent pack for broken or improperly sealed caps; manually open each bottle to ensure the flipper bar raises the reagent cap correctly; close each flipper bar prior to loading reagent pack on instrument; and discard any reagent packs that do not open properly.  If a probe crash is observed prior to testing samples again, a probe crash recovery must be performed following the procedure in the Operations Manual.  A copy of the communication needs to be provided to any laboratory that you may have forwarded affected lots to.  Users were requested to return a customer reply letter acknowledging receipt and understanding of the letter. For additional information, contact Abbott Labs at 1-877-4ABBOTT.",
+   "recalling_firm": "Abbott Laboratories",
+   "product_quantity": "2,314 kits",
+   "distribution_pattern": "Worldwide Distribution -- USA including Puerto Rico and countries of Germany, Mexico, Hong Kong, and Japan."
+  },
+  {
+   "product_res_number": "Z-1053-04",
+   "event_date_initiated": "2004-06-07",
+   "event_date_posted": "2004-07-20",
+   "recall_status": "Terminated",
+   "res_event_number": "29394",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031031"
+   ],
+   "product_description": "Vitros Immunodiagnostic Products TROPONIN I Reagent Packs, (Lot 1110  and 1130 REF #194 9882 and  Lot 2510  and 2530 REF #680 1857).  Each reagent pack contains 100 coated wells.  Firm on label:  Ortho-Clinical Diagnostics, Amersham UK.",
+   "reason_for_recall": "Random occurrence of false positive test results.",
+   "root_cause_description": "Other",
+   "action": "Domestic:  Phone calls on 6/7-8/2004.  Recall letters sent Federal Express on 6/7/2004.  Foreign affiliates notified via e-mail on 6/7/2004.  Customers instructed to discard inventory and notify health care providers.  EXPANDED:  Domestic: 7/1/2004 phone calls and faxes to consignees.  FED EX letters mailed on 7/2/2004.  Foreign affiliates notified via email on 6/30/2004.",
+   "recalling_firm": "Ortho-Clinical Diagnostics",
+   "product_quantity": "5,185 reagent packs  (6/7/04) & 1,507 reagent packs (6/30/04)",
+   "distribution_pattern": "4,665 reagent packs shipped to domestic customers nationwide, including 8 federal government accounts (contract #V797P-6565A).  520 reagent packs shipped to 22 foreign affiliates who further distributed the product to:  Asia Pacific, Canada, Caribbean, Chile, China, France, Germany, Italy, Mexico, Spain, UK and Northern Europe.  EXPANDED:  440 reagent packs shipped to 13 domestic customers and 1,067 reagent packs shipped to 22 foreign affiliates."
+  },
+  {
+   "product_res_number": "Z-1108-2008",
+   "event_date_initiated": "2007-07-19",
+   "event_date_posted": "2008-03-19",
+   "recall_status": "Terminated",
+   "res_event_number": "46362",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K023764"
+   ],
+   "product_description": "UniCel Dxl Access Immunoassay Systems Reaction Vessels for Use with UniCel Dxl Access Immunoassay Systems, Part Number : 386167, Beckman Coulter, Inc, Brea CA 92822",
+   "reason_for_recall": "Erroneous Results - UniCel Dxl Access Immunoassay Systems Reaction Vessels have been found to be defective and there is a potential for an increase in signal leading to an erroneous result.",
+   "root_cause_description": "Process design",
+   "action": "A Product Corrective Action (PCA) letter was mailed on July 19, 2007, to the Customers that received UniCel Dxl Access\nlmmunoassay System Reaction Vessels lot 1201291 and\n1201431. The customers were informed that a small\npercentage of the reaction vessels (Lot #s: 1201291and\n1201431 ) have been found to be defective and there is a\npotential for an increase in signal leading to an erroneous\nresult. The customers were instructed to discontinue use and\ndiscard these lots.  A response form was included.",
+   "recalling_firm": "Beckman Coulter Inc",
+   "product_quantity": "264 units in the US; 9 units in Canada",
+   "distribution_pattern": "Nationwide & Canada"
+  },
+  {
+   "product_res_number": "Z-1318-2010",
+   "event_date_initiated": "2010-02-06",
+   "event_date_posted": "2010-04-12",
+   "recall_status": "Terminated",
+   "res_event_number": "54729",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K010429",
+    "K021814"
+   ],
+   "product_description": "Access Immunoassay Systems Accu Tnl Reagent Kit when used in conjunction with UniCel Dxl Access Immunoassay Systems; Reagent Part Numbers: A78803 & 33340; Calibrator Part Number: 33345 \n\nThe intended use: The Access AccuTnI assay is a paramagnetic particle, chemiluminescent immunoassay for the quantitative determination of cardiac troponin I (cTnI) levels in human serum and plasma using the Access Immunoassay Systems to aid in the diagnosis and treatment of myocardial infarction and cardiac muscle damage. Cardiac Troponin I determination also aids in the risk stratification of patients with unstable angina or non-ST segment elevation acute coronary syndromes with respect to relative risk of mortality, myocardial infarction, or increased probability of ischemic events requiring urgent revascularization procedures.",
+   "reason_for_recall": "The recall was initiated because Beckman Coulter has confirmed customer reports that different results have been obtained using\nthe same patient samples on Access/Access 2 and UniCel Dxl platforms. Values obtained with\nUniCel Dxl systems have been demonstrated to have a positive bias compared to values\nobtained with Access or Access 2 systems.",
+   "root_cause_description": "Other",
+   "action": "An \"URGENT: PRODUCT CORRECTIVE ACTION (PCA)\" letter dated February 5, 2010, was sent to the customers. The letter describes the product, problem and action to be taken by the customers. The customers are recommended to immediately discontinue using AccuTnI Reagents and Calibrators on the UniCel DxI system until further notice. If this is not possible, the customers are directed to notify their stakeholders of the bias until further notice. The customers should complete, fax  (786-639-4000) or mail the enclosed RESPONSE FORM.\n\nIf consignees need assistance or have any questions regarding the notification, they were instructed to contact Technical\nSupport at 1-800-854-3633 in the United States and Canada.",
+   "recalling_firm": "Beckman Coulter Inc.",
+   "product_quantity": "196,071 kits",
+   "distribution_pattern": "Worldwide distribution: USA and Canada"
+  },
+  {
+   "product_res_number": "Z-1340-2022",
+   "event_date_initiated": "2022-05-18",
+   "event_date_posted": "2022-07-06",
+   "recall_status": "Terminated",
+   "res_event_number": "90387",
+   "product_code": "MMI",
+   "k_numbers": null,
+   "product_description": "Dimension LTNI -In vitro diagnostic test intended to quantitively measure cardiac troponin-I levels in human serum and heparinized plasma to aid in the diagnosis of myocardial infarction.\nSiemens Material Number (SMN)/REF (Catalog Number): 10444896/RF521",
+   "reason_for_recall": "Positive bias with Lithium Heparin plasma samples from\nindividuals that are expected to be below the 99th percentile of 0.07 ng/mL [0.07 g/L], may lead to inappropriate intervention for myocardial infarction",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "****Recall Expanded 9-21-22***\nUS Customers were sent Urgent Medical Device Correction (DC-22-2.B.US) on 09/21/2022 and an Urgent Field Safety Notice UFSN DC-22-02.B.OUS) was issued to all OUS Siemens reporting sites with affected customers, for distribution and regional reporting to their local competent authorities beginning on 09/26/2022.\n\n Letter informs them to use serum patient samples only when utilizing lot BA3088. Laboratories unable to use serum patient samples for testing are to request a no charge replacement for their impacted reagent.\n\n\nSiemens issued Urgent Medical Device Correction (UMDC) to US affected customers by FedEx beginning on 05/18/2022. \tAn Urgent Field Safety Notice (UFSN) was issued to all OUS Siemens reporting sites for distribution and regional reporting to their local competent authorities beginning on 05/18/2022. Letter states reason for recall, health risk and action to take:\nPlease review this letter with your Medical Director.\n Siemens recommends using serum patient samples only when using the lots listed in\nTable 1. If your laboratory is not able to use serum samples, please discard the reagent and\ncomplete the attached Product Replacement form for a no-charge replacement product.\n Review your inventory to determine possible replacement needs and to provide information\nto Siemens for reporting to the Authorities.\n Complete and return the Field Correction Effectiveness Check/Product Replacement Form\nattached to this letter within 30 days to Siemens Healthineers for reporting to the\nAuthorities.\n If you have received any complaints of illness or adverse events associated with the\nproducts listed in Table 1, immediately contact your local Siemens Healthineers Customer Care Center or your local Siemens Healthineers Technical Support Representative.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "76 units",
+   "distribution_pattern": "Worldwide distribution - US Nationwide distribution in the states of AL, AR, CA, IL MN, MS, NC, ND, NH, OK, SD, TN, TX, WA and the countries of Argentina, Brazil, Canada, France, Germany, India, Mexico, Poland, Portugal, Slovakia, Spain."
+  },
+  {
+   "product_res_number": "Z-1341-2022",
+   "event_date_initiated": "2022-05-18",
+   "event_date_posted": "2022-07-06",
+   "recall_status": "Terminated",
+   "res_event_number": "90387",
+   "product_code": "MMI",
+   "k_numbers": null,
+   "product_description": "Dimension CTNI-In vitro diagnostic test intended to quantitively measure cardiac troponin-I levels in human serum and heparinized plasma to aid in the diagnosis of myocardial infarction.\nSiemens Material Number (SMN)/REF (Catalog Number): 10444905/RF421C",
+   "reason_for_recall": "Positive bias with Lithium Heparin plasma samples from\nindividuals that are expected to be below the 99th percentile of 0.07 ng/mL [0.07 g/L], may lead to inappropriate intervention for myocardial infarction",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "****Recall Expanded 9-21-22***\nUS Customers were sent Urgent Medical Device Correction (DC-22-2.B.US) on 09/21/2022 and an Urgent Field Safety Notice UFSN DC-22-02.B.OUS) was issued to all OUS Siemens reporting sites with affected customers, for distribution and regional reporting to their local competent authorities beginning on 09/26/2022.\n\n Letter informs them to use serum patient samples only when utilizing lot BA3088. Laboratories unable to use serum patient samples for testing are to request a no charge replacement for their impacted reagent.\n\n\nSiemens issued Urgent Medical Device Correction (UMDC) to US affected customers by FedEx beginning on 05/18/2022. \tAn Urgent Field Safety Notice (UFSN) was issued to all OUS Siemens reporting sites for distribution and regional reporting to their local competent authorities beginning on 05/18/2022. Letter states reason for recall, health risk and action to take:\nPlease review this letter with your Medical Director.\n Siemens recommends using serum patient samples only when using the lots listed in\nTable 1. If your laboratory is not able to use serum samples, please discard the reagent and\ncomplete the attached Product Replacement form for a no-charge replacement product.\n Review your inventory to determine possible replacement needs and to provide information\nto Siemens for reporting to the Authorities.\n Complete and return the Field Correction Effectiveness Check/Product Replacement Form\nattached to this letter within 30 days to Siemens Healthineers for reporting to the\nAuthorities.\n If you have received any complaints of illness or adverse events associated with the\nproducts listed in Table 1, immediately contact your local Siemens Healthineers Customer Care Center or your local Siemens Healthineers Technical Support Representative.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "113 units; Extended: 52 units",
+   "distribution_pattern": "Worldwide distribution - US Nationwide distribution in the states of AL, AR, CA, IL MN, MS, NC, ND, NH, OK, SD, TN, TX, WA and the countries of Argentina, Brazil, Canada, France, Germany, India, Mexico, Poland, Portugal, Slovakia, Spain."
+  },
+  {
+   "product_res_number": "Z-1387-2012",
+   "event_date_initiated": "2012-03-12",
+   "event_date_posted": "2012-04-11",
+   "recall_status": "Terminated",
+   "res_event_number": "61249",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K082699"
+   ],
+   "product_description": "Elecsys Troponin I Immunoassay\n\nFor the in-vitro quantitative determination of cardiac troponin I in human serum and plasma. Elecsys Troponin I is intended to aid in the diagnosis of myocardial infarction.",
+   "reason_for_recall": "An investigation has confirmed a considerably reduced recovery of Li-heparin plasma samples for Troponin I lot 163176 and Troponin I STAT lot 163177.  In the worst case, Li-Heparin sample recovery may be as low as 50% of the serum recovery.  Correct serum recovery has been confirmed for the affected lots.\nThe issue is caused by the raw material lot (Poly-L-Lysin) instability.  Poly-L-Lysin is the",
+   "root_cause_description": "Nonconforming Material/Component",
+   "action": "The firm, Roche Diagnostics Corporation, sent an \"URGENT MEDICAL DEVICE REMOVAL\" letter dated March 12, 2012 to all customers that received the affected lots of Elecsys Troponin I or Elecsys Troponin I STAT. The letter describes the product, problem and actions to be taken. The customers were instructed to immediately discontinue use of the affected product; discard the affected product from their inventory according to their site's local regulations; if their facility has distributed the affected product to other sites, ensure that this letter is provided to those sites; complete and return the attached fax form via fax to 1-888-912-8457 and file this letter for future references.\n\nIf you have any questions about the information contained in this letter, please contact Roche Diagnostics Technical Support, 24 hours a day, seven days a week at 1-800-428-2336.",
+   "recalling_firm": "Roche Diagnostics Operations, Inc.",
+   "product_quantity": "739 kits",
+   "distribution_pattern": "Worldwide distribution.\n\nArgentina, Kenya, Austria, South Korea, Belgium, Kuwait, Bahrain, Morocco, Brazil, Mexico, Switzerland, Nigeria, Chile, New Zealand, Columbia, Philippines, Germany, Pakistan, Algeria, Poland, Egypt, Qatar, Spain, \nTunisia, France, Turkey, United Kingdom, Taiwan, India, Ukraine, Iran, Venezuela, Italy, South Africa, Jordan, and Armenia."
+  },
+  {
+   "product_res_number": "Z-1388-2012",
+   "event_date_initiated": "2012-03-12",
+   "event_date_posted": "2012-04-11",
+   "recall_status": "Terminated",
+   "res_event_number": "61249",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K082699"
+   ],
+   "product_description": "Elecsys Troponin I STAT Immunoassay\n\nFor the in-vitro quantitative determination of cardiac troponin I in human serum and plasma. Elecsys Troponin I is intended to aid in the diagnosis of myocardial infarction.",
+   "reason_for_recall": "An investigation has confirmed a considerably reduced recovery of Li-heparin plasma samples for Troponin I lot 163176 and Troponin I STAT lot 163177.  In the worst case, Li-Heparin sample recovery may be as low as 50% of the serum recovery.  Correct serum recovery has been confirmed for the affected lots.\nThe issue is caused by the raw material lot (Poly-L-Lysin) instability.  Poly-L-Lysin is the",
+   "root_cause_description": "Nonconforming Material/Component",
+   "action": "The firm, Roche Diagnostics Corporation, sent an \"URGENT MEDICAL DEVICE REMOVAL\" letter dated March 12, 2012 to all customers that received the affected lots of Elecsys Troponin I or Elecsys Troponin I STAT. The letter describes the product, problem and actions to be taken. The customers were instructed to immediately discontinue use of the affected product; discard the affected product from their inventory according to their site's local regulations; if their facility has distributed the affected product to other sites, ensure that this letter is provided to those sites; complete and return the attached fax form via fax to 1-888-912-8457 and file this letter for future references.\n\nIf you have any questions about the information contained in this letter, please contact Roche Diagnostics Technical Support, 24 hours a day, seven days a week at 1-800-428-2336.",
+   "recalling_firm": "Roche Diagnostics Operations, Inc.",
+   "product_quantity": "1,288 kits",
+   "distribution_pattern": "Worldwide distribution.\n\nArgentina, Kenya, Austria, South Korea, Belgium, Kuwait, Bahrain, Morocco, Brazil, Mexico, Switzerland, Nigeria, Chile, New Zealand, Columbia, Philippines, Germany, Pakistan, Algeria, Poland, Egypt, Qatar, Spain, \nTunisia, France, Turkey, United Kingdom, Taiwan, India, Ukraine, Iran, Venezuela, Italy, South Africa, Jordan, and Armenia."
+  },
+  {
+   "product_res_number": "Z-1391-2009",
+   "event_date_initiated": "2009-04-27",
+   "event_date_posted": "2009-05-08",
+   "recall_status": "Terminated",
+   "res_event_number": "51925",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K030286"
+   ],
+   "product_description": "Triage Cardiac Panel, Biosite Catalog Number 97000HS, 25 individually pouched devices in a labeled kit box. \n\nFluorescence immunoassay kit to be used with the Triage Meter for the quantitative determination of myoglobin, creatine kinase MB fraction (CK-MB), and troponin I in EDTA whole blood and plasma specimens.  These three cardiac biomarkers are used as an aid in the diagnosis of myocardial infarction (injury).",
+   "reason_for_recall": "The recall was initiated because the use of the affected lot may lead to reporting falsely low values for troponin I and myoglobin, possibly resulting in missed or incorrect diagnosis.",
+   "root_cause_description": "Process control",
+   "action": "The recall was initiated with \"Urgent Medical Device Recall\" notices, dated 4/28/2009, with attached  \"Customer/Distributor Verification Form\" being sent to the affected customers via fax, e-mail or direct mail on 04/28/2009. \n\nCustomers were informed of the reason for the recall and instructed to immediately discontinue all use of the listed products and discard all affected product in accordance with your their regulations. The customers were give two options; \"Option 1: Complete and FAX the enclosed Verification Form within 10 days to confirm your receipt of this notice, to indicate the number of kits discarded from your inventory and product replacement will be sent to you. Option 2: Contact inverness Medical Technical Service at 1-877-441-7440 and select option 2 from the phone prompt.  A representative will confirm the number of kits discarded from your inventory and arrange for replacement product to be sent to you.\"\n\nCustomers were also provided telephone, fax and e-mail contact information for Biosite should they have any questions about the information contained in the recall notification.",
+   "recalling_firm": "Biosite Inc",
+   "product_quantity": "401 kits",
+   "distribution_pattern": "Nationwide Distribution"
+  },
+  {
+   "product_res_number": "Z-1466-2012",
+   "event_date_initiated": "2012-03-05",
+   "event_date_posted": "2012-04-26",
+   "recall_status": "Terminated",
+   "res_event_number": "61516",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K080269"
+   ],
+   "product_description": "Alere Triage CardioProfiler Panel, PN 97100CP. The test is used as an aid in the diagnosis of myocardial infarction (injury), an aid in the diagnosis and assessment of severity of congestive heart failure, an aid in the risk stratification of patients with heart failure, and as an aid in the risk stratification of patients with acute coronary syndromes.",
+   "reason_for_recall": "Alere San Diego, Inc. is initiating a voluntary recall of the Alere Triage CardioProfiler Panel PN 9700CP, Lot W49569 and the Alere Triage Profiler SOB Panel PN 97300, Lot W48990.  Alere San Diego, Inc. has determined that these lots have an increased frequency of Troponin I results >0.05ng/mL for samples which are found to be below 0.05ng/mL upon additional testing.",
+   "root_cause_description": "Process control",
+   "action": "A recall communication was initiated on 3/15/12 with Alere San Diego, Inc. forwarding a \"Urgent Medical Device Recall\" letter to all their customers who purchased the Alere Triage CardioProfiler Panel PN 97100CP, Lot W49569 and Alere Triage Profiler SOB Panel PN 97300, Lot W48990.  The letter informed the customers about the problems identified and the actions to be taken.  Customers with any questions about the information contained in this notification should contact Alere San Diego, Inc. at (877) 308-8287.",
+   "recalling_firm": "Alere San Diego",
+   "product_quantity": "1080 kits",
+   "distribution_pattern": "Worldwide Distribution, including Nationwide (US) and the countries of Brazil, China, India and Kuwait."
+  },
+  {
+   "product_res_number": "Z-1467-2012",
+   "event_date_initiated": "2012-03-05",
+   "event_date_posted": "2012-04-26",
+   "recall_status": "Terminated",
+   "res_event_number": "61516",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K080269"
+   ],
+   "product_description": "Alere Triage Profiler SOB Panel, PN 97300. The test is used as an aid in the diagnosis of myocardial infarction (injury), an aid in the diagnosis and assessment of severity of heart failure, an aid in the risk stratification of patients with heart failure, an aid in the assessment and evaluation of patients suspected of having disseminated intravascular coagulation or thromboembolic events including pulmonary embolism and an aid in the risk stratification of patients with acute coronary syndromes.",
+   "reason_for_recall": "Alere San Diego, Inc. is initiating a voluntary recall of the Alere Triage CardioProfiler Panel PN 9700CP, Lot W49569 and the Alere Triage Profiler SOB Panel PN 97300, Lot W48990.  Alere San Diego, Inc. has determined that these lots have an increased frequency of Troponin I results >0.05ng/mL for samples which are found to be below 0.05ng/mL upon additional testing.",
+   "root_cause_description": "Process control",
+   "action": "A recall communication was initiated on 3/15/12 with Alere San Diego, Inc. forwarding a \"Urgent Medical Device Recall\" letter to all their customers who purchased the Alere Triage CardioProfiler Panel PN 97100CP, Lot W49569 and Alere Triage Profiler SOB Panel PN 97300, Lot W48990.  The letter informed the customers about the problems identified and the actions to be taken.  Customers with any questions about the information contained in this notification should contact Alere San Diego, Inc. at (877) 308-8287.",
+   "recalling_firm": "Alere San Diego",
+   "product_quantity": "1,316 kits",
+   "distribution_pattern": "Worldwide Distribution, including Nationwide (US) and the countries of Brazil, China, India and Kuwait."
+  },
+  {
+   "product_res_number": "Z-1509-2012",
+   "event_date_initiated": "2012-04-11",
+   "event_date_posted": "2012-05-10",
+   "recall_status": "Terminated",
+   "res_event_number": "61630",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K041192"
+   ],
+   "product_description": "ARCHITECT STAT Troponin-I Reagent Kit; list numbers 2K41-28 (500 test kit); an in-vitro diagnostic test kit; each kit contains bottles of microparticles, conjugate and assay diluent; Abbott Laboratories, Abbott Park, IL 60064\n\nARCHITECT STAT Troponin-I is a chemiluminescent microparticle immunoassay (CMIA) for the quantitative determination of cardiac troponin-I in human serum and plasma on the ARCHITECT i System with STAT protocol capability. Troponin-I values are used to assist in the diagnosis of myocardial infarction (MI) and in the risk stratification of patients with acute coronary syndromes (including unstable angina and non-ST elevation) with respect to relative risk of mortality, myocardial infarction, or increased probability of ischemic events.",
+   "reason_for_recall": "The lot of Troponin-I is demonstrating a shift in expected results in some cases, and varies from kit to kit.  A concentration change of up to +/-55% could occur when switching kits without recalibrating.",
+   "root_cause_description": "Material/Component Contamination",
+   "action": "The firm, Abbott Laboratories, sent a \"Product Recall Immediate Action Required\"letter dated April 11, 2012 to all Troponin-I customers who received the affected reagent lot internationally. The customers were directed to determine if they are currently using and/or have inventory of lot 74264UN11; to discontinue use and destroy any remaining inventory of the lot; to follow their facility's policies and procedures for communicating with the heath care providers they serve; to forward a copy of the letter to any laboratory to whom they may have forwarded the reagent; to retain a copy of the letter for their records and to complete and return the Customer Reply Form (sent to Abbott international affiliates via e-mail on 4/11/2012) via fax to: 1-800-777-0051 or e-mail: QAGCO@abbott.com.  \n\nAny questions were directed to their local Customer Service representative or call the field action coordinator at 847-938-1923 or email: albert.chianello@abbott.com.",
+   "recalling_firm": "Abbott Laboratories",
+   "product_quantity": "8,723 kits",
+   "distribution_pattern": "International distribution only: including countries of: Algeria, Argentina, Australia, Austria, Bangladesh, Belgium, Bosnia & Herze, Brazil, Bulgaria, Canada, Chile, China, Columbia, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Germany, Greece, Hong Kong, Hungary, India, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kuwait, Latvia, Lebanon, Lithuania, Luxembourg, Macedonia, Mali, Malaysia, Mauritania, Mexico, Morocco, Netherlands, New Zealand, Norway, Oman, Pakistan, Paraguay, Poland, Portugal, Romania, Russia, Saudi Arabia, Singapore, Slovakia, Slovenia, South Africa, South Korea, Spain, Sweden, Switzerland, Tunisia, Turkey, United Arab Emirates, United Kingdom, Venezuela and Vietnam."
+  },
+  {
+   "product_res_number": "Z-1555-2009",
+   "event_date_initiated": "2008-04-28",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "52007",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K051650"
+   ],
+   "product_description": "Siemens Stratus CS Acute Care Troponin I CalPak.\n\nIn vitro product intended to be used for calibration of the cardiac troponin I method on the Stratus CS analyzer.",
+   "reason_for_recall": "The firm received and confirmed that some lots of Cardiac Troponin I (cTnl) CalPaks (CCTNI-CR) may exhibit calibration issues that cause lower than typical signal during calibration with the current population of cTnl TestPaks (CCTNI). This issue may result in failed calibrations due to \"Slope Error\" messages or falsely elevated patient sample and quality control (QC) results on calibrations that",
+   "root_cause_description": "Labeling False and Misleading",
+   "action": "Siemens Healthcare Diagnostics, Inc. issued an Urgent Field Safety Notice dated April 29, 2008 to all affected customers instructing them  to discontinue use of 3 CalPak lots and reduce the shelf-life for the remaining lots.\n\nFor further information, contact Siemens Healthcare Diagnostics, Inc. at 1-302-631-7672.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "4415 cartons",
+   "distribution_pattern": "Worldwide Distribution -  including United States, United Arab Emirates, Austria, Bermuda, Belize, Canada, Germany, Egypt, India, Japan, Saudi Arabia and Bengal."
+  },
+  {
+   "product_res_number": "Z-1595-2021",
+   "event_date_initiated": "2021-04-07",
+   "event_date_posted": null,
+   "recall_status": "Open, Classified",
+   "res_event_number": "87705",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K082699"
+   ],
+   "product_description": "Elecsys Troponin I STAT Immunoassay: Catalog# 05094798160 - Product Usage: intended to aid in the diagnosis of myocardial infarction.",
+   "reason_for_recall": "Recall reason is possible sporadic false negative conventional troponin results. Roche has confirmed an issue with running Elecsys Troponin I/Troponin I STAT and Elecsys proBNP II/proBNP II STAT on the cobas e 601 and 602 modules. When the proBNP II analyte is measured immediately before the Troponin I analyte on the same module, a decreased recovery on Troponin I was observed.",
+   "root_cause_description": "Device Design",
+   "action": "On 04/07/2021, Roche issued Urgent Medical Device Correction via fax notifying customers that Roche has confirmed an issue with running Elecsys Troponin I/Troponin I STAT and Elecsys proBNP II/ proBNP II STAT on the cobas e 601 and 602 modules. When the proBNP II analyte was measured immediately before the Troponin I analyte on the same module, a decreased recovery of Troponin I was observed.",
+   "recalling_firm": "Roche Diagnostics Operations, Inc.",
+   "product_quantity": "10, 489 kits",
+   "distribution_pattern": "US Nationwide distribution in the states of AL, AZ, CA, CT, FL, GA, ID, IL, IN,KS, KY, MD, ME, MO, NC, NE, NJ, NM, NY, OH, OK, SC, SD, TN, TX, VA, WA, WY."
+  },
+  {
+   "product_res_number": "Z-1596-2021",
+   "event_date_initiated": "2021-04-07",
+   "event_date_posted": null,
+   "recall_status": "Open, Classified",
+   "res_event_number": "87705",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K082699"
+   ],
+   "product_description": "Elecsys Troponin I Immunoassay: Catalog# 05094810160 - Product Usage: intended to aid in the diagnosis of myocardial infarction.",
+   "reason_for_recall": "Recall reason is possible sporadic false negative conventional troponin results. Roche has confirmed an issue with running Elecsys Troponin I/Troponin I STAT and Elecsys proBNP II/proBNP II STAT on the cobas e 601 and 602 modules. When the proBNP II analyte is measured immediately before the Troponin I analyte on the same module, a decreased recovery on Troponin I was observed.",
+   "root_cause_description": "Device Design",
+   "action": "On 04/07/2021, Roche issued Urgent Medical Device Correction via fax notifying customers that Roche has confirmed an issue with running Elecsys Troponin I/Troponin I STAT and Elecsys proBNP II/ proBNP II STAT on the cobas e 601 and 602 modules. When the proBNP II analyte was measured immediately before the Troponin I analyte on the same module, a decreased recovery of Troponin I was observed.",
+   "recalling_firm": "Roche Diagnostics Operations, Inc.",
+   "product_quantity": "726 kits",
+   "distribution_pattern": "US Nationwide distribution in the states of AL, AZ, CA, CT, FL, GA, ID, IL, IN,KS, KY, MD, ME, MO, NC, NE, NJ, NM, NY, OH, OK, SC, SD, TN, TX, VA, WA, WY."
+  },
+  {
+   "product_res_number": "Z-1660-2022",
+   "event_date_initiated": "2022-07-26",
+   "event_date_posted": null,
+   "recall_status": "Open, Classified",
+   "res_event_number": "90692",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K041192"
+   ],
+   "product_description": "ARCHITECT STAT Troponin-I Reagent Kit, REF 2K41-27",
+   "reason_for_recall": "One lot of reagent was manufactured with insufficient quantities of the heterophilic blocking agents in the conjugate component.",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "On July 26, 2022, Abbott issued a Product Recall letter for this issue sent the letter via FedEx priority overnight express.  The letter provided the reason for the recall and hazard involved and requested the consignee take the following actions:\n\"\" IMMEDIATELY discontinue use of ARCHITECT STAT Troponin-I, List Number 2K41-27 lot number 63718UN22 and destroy all inventory of lot 63718UN22 according to your laboratory procedures.\n\" Please contact Customer Support to order replacement material.\n\" Please review this letter with your Medical Director or Laboratory Management and follow your laboratory protocol regarding the need for review of previously reported patient results using lot number 63718UN22.\n\" Complete and return the Customer Reply Form.\n\" If you have forwarded the product listed above to other laboratories, please inform them of this Product Recall and provide to them a copy of this letter.\n\" Please retain this letter for your laboratory records.\"  \nQuestions regarding the information were provided the  following contact information:  \nIf you or any of the health care providers you serve have questions regarding this information, please contact Customer Service at 1-877-4ABBOTT (available 24 hours a day, 7 days a week).",
+   "recalling_firm": "Abbott Laboratories",
+   "product_quantity": "2451 kits of 100 tests",
+   "distribution_pattern": "Nationwide"
+  },
+  {
+   "product_res_number": "Z-1671-2018",
+   "event_date_initiated": "2018-01-02",
+   "event_date_posted": "2018-05-04",
+   "recall_status": "Terminated",
+   "res_event_number": "79505",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K063756"
+   ],
+   "product_description": "Dimension Vista Cardiac Troponin I (CTNI) Flex reagent cartridge",
+   "reason_for_recall": "Concentrations for the level of biotin that does not interfere is not currently listed in the instruction for use for the Dimension Vista CTNI, Dimension Vista MMB, Dimension Sirolimus, ADVIA Centaur FOL, ADVIA Centaur aHBcM and the following IMMULITE assays, 3gAllergy  Specific IgE, anti-HBc, BR-MA (CA15-3), CEA, Folic Acid, Gastrin, OM-MA (CA125), Thyroglobulin, and Vitamin B12, and these assays are susceptible to interference from biotin.",
+   "root_cause_description": "Error in labeling",
+   "action": "Siemens Healthcare Diagnostics issued a recall in March 2017 for products with incorrect units for biotin in the Instructions for Use. After further investigation, recalling firm determined that more Siemens products also had missing or incorrect information in the IFUs for which two recalls were initiated, and Amended Corrections and Removals Reports were submitted to the FDA",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": null,
+   "distribution_pattern": "Nationwide and Canada, Mexico, and Thailand"
+  },
+  {
+   "product_res_number": "Z-1731-2009",
+   "event_date_initiated": "2008-04-08",
+   "event_date_posted": "2009-08-12",
+   "recall_status": "Terminated",
+   "res_event_number": "51998",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K010313"
+   ],
+   "product_description": "Dimension Cardiac  Troponin I Flex reagent cartridge (CTNI).\n\nThe CTNI method for the Dimension Clinical Chemistry System with the heterogeneous immunoassay module is an in vitro diagnostic test intended to quantitatively measure cardiac troponin-I levels in human serum and heparinized plasma to aid in the diagnosis of myocardial infarction and in the risk of stratification of patients with acute coronary syndromes with respect to their relative risk of mortality.",
+   "reason_for_recall": "possibility of falsely elevated results",
+   "root_cause_description": "Process control",
+   "action": "Siemens Healthcare Diagnostics issued a letter to their customers starting April 8, 2008 informing them of the problem and to discontinue use of the product.  \n\nFurther questions should be addressed to Siemens Healthcare Diagnostics, Inc. at 1-800-441-9250.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "4,574 cartons",
+   "distribution_pattern": "Worldwide Distribution -- Including countries of the United States, Bahamas, Belgium, Czech Republic, France, Germany, Italy, Poland, Portugal, Saudi Arabia, Spain, South Korea, and Slovakia."
+  },
+  {
+   "product_res_number": "Z-1732-2011",
+   "event_date_initiated": "2010-12-23",
+   "event_date_posted": "2011-03-18",
+   "recall_status": "Terminated",
+   "res_event_number": "57615",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K051650"
+   ],
+   "product_description": "Stratus(R) CS Acute Care Troponin I TestPak, Troponin I Assay\n\nThe Stratus(R) CS Acute CareTM Troponin I method (CTNI) is an in vitro diagnostic test for the measurement of cardiac Troponin I in heparinized plasma. Cardiac Troponin I measurements can be used as an aid in the diagnosis of acute myocardial infarction (AMI). Cardiac Troponin I can also be used as an aid in the risk stratification of patients with acute coronary syndromes (ACS) with respect to their relative risk of mortality.",
+   "reason_for_recall": "Low frequency of non-repeatable falsely elevated CTNI results without an associated error message.",
+   "root_cause_description": "Other",
+   "action": "The firm, SIEMENS, sent an \"Urgent Field Safety Notice\" letter dated December 2010 to all Stratus(R) CS Instrument customers.  The letter described the product, problem and actions to be taken.  The customers were instructed to repeat testing of samples with CTNI results above 0.07 ng/mL; discuss content of this letter with their laboratory director regarding the need to review test results reported from CTNI TestPak lots 230200002 or greater; complete and return the FIELD CORRECTION EFFECTIVENESS CHECK form via fax to Technical Solutions Center at 302-631-8467, and forward this notification to anyone to whom they may have distributed this product.\n\nIf you have any questions, please contact the Siemens Technical Solutions Center at 800-405-6473.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "11635",
+   "distribution_pattern": "Worldwide distribution: AL, AK, AZ, AR, CA, CO, DC, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, and WY.Product was distributed to foreign accounts in Algeria, Armenia, Australia, Austria, Bahrain, Bangladesh,Belgium, Bosnia & Herzegovina, Canada, Canary Islands, Czech Republic, Cyprus, Croatia, Denmark, Finland, France, Germany, Great Britain, Greece, Guadeloupe, Indonesia, India, Israel, Ireland, Italy, Japan, Libya, Malaysia, Morocco, Netherlands, New Zealand, Norway, Philippines, Poland, Portugal, Qatar, Romania, Saudi Arabia, Slovakia, Slovenia, South Africa, Spain, Sweden, Switzerland, Taiwan, Turkey, and United Arab Emirates."
+  },
+  {
+   "product_res_number": "Z-1883-2011",
+   "event_date_initiated": "2009-12-10",
+   "event_date_posted": "2011-04-04",
+   "recall_status": "Terminated",
+   "res_event_number": "55554",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K010429",
+    "K021814"
+   ],
+   "product_description": "Access Immunoassay Systems enhanced AccuTnl Reagent Kit, Part Number: A78803\n\nThe Access Accu Tri assay is a paramagnetic particle, chemiluminescent immunoassay for the quantitative determination of cardiac troponin I (cTnl) levels in human serum and plasma using the Access Immunoassay Systems to aid in the diagnosis and treatment of myocardial infarction and cardiac muscle damage. Cardiac Troponin I determination aids in the risk stratification of patients with unstable angina coronary syndromes with respect to relative risk of mortality, myocardial infarction, or increased probability of ischemic events requiring urgent revascularization procedures.",
+   "reason_for_recall": "The recall was initiated after Beckman Coulter confirmed that under certain circumstances, the following assays may produce elevated values at the low end when run in conjunction with the enhanced Access Accu Tnl assay (P/N A 78033):\n(1) Access Total BhCG (P/N 33500);\n(2) Access HYPERsensitive hTSH/Fast hTSH (P/N 33820);\n(3) Access hFSH (P/N 33520).\nThe issue can occur only when the assays are",
+   "root_cause_description": "Other",
+   "action": "The firm, Beckman Coulter, sent an \"URGENT: PRODUCT CORRECTIVE ACTION\" letter dated December 16, 2009 to all customers.  The letter described the product, problem and actions to be taken. Beckman Coulter instructed the customers to do the following mitigation to reduce the risk of encountering an erroneous result:\n\nSystems with multiple reagent pipettors (UniCel Dxl 800 and 600; UniCel DxC 880i, 860i, 680i, and 660i):\n1. Designate enhanced Access AccuTnl to a different reagent pipettor (s) than Access Total BhCG/Dil-hCG2, hTSH/Fast hTSH and hFSH.\n2. Discard any open Access Total BhCG, hTSH/Fast hTSH and hFSH reagent packs\n3. Calibrate Access Total BhCG, hTSH and hFSH using fresh reagent packs\n4. Run QC following acceptable calibration curves.  Proceed with operation following acceptable QC performance\n\nSystems without multiple reagent pipettors (Access, Access 2; SYNCHRON LXi 725, UniCel DxC 600i):\n1. Discard any open Access Total BhCG, hTSH/Fast hTSH and hFSH reagent packs.\n2. Calibrate Access Total BhCG, hTSH/Fast hTSH and hFSH using fresh reagent packs\n3. Run QC following acceptable calibration curves.\nEnsure that controls and patient samples for Access Total BhCG/Dil-hCG2, hTSH/Fast hTSH and hFSH are not run immediately following enhanced Access AccuTnl controls or patient samples.\nFor example, during routine QC runs, ensure that these assays are requested prior to enhanced Access AccuTnl.\n4. Proceed with operation following acceptable QC performance.\nNOTE: An enhanced AccuTnl sample loaded with a system priority of STAT will interrupt routine Total BhCG/Dil-hCG2, hTSH/Fast hTSH and hFSH sample aspiration.  Avoid loading enhanced AccuTnl sample aspiration.  Avoid loading enhanced AccuTnl samples with a system priority of STAT during aspiration of Total BhCG/Dil-hCG2, hTSH/Fast hTSH and hFSH.\n\nDiagnostic test results should be interpreted in light of the clinical presentation of the patient, including: symptoms, clinical history, data from other",
+   "recalling_firm": "Beckman Coulter Inc.",
+   "product_quantity": "22,032 kits",
+   "distribution_pattern": "Worldwide distribution: USA and country of Canada."
+  },
+  {
+   "product_res_number": "Z-1974-2023",
+   "event_date_initiated": "2023-05-25",
+   "event_date_posted": "2023-07-07",
+   "recall_status": "Open, Classified",
+   "res_event_number": "92447",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K030286"
+   ],
+   "product_description": "Quidel Triage Cardiac Panel: REF: 97000HS, 97021HS (Troponin I), 97022HS (CK-MB and Troponin I), 97000HSEU, 97000HSEUJP, 97000HZ01, 97000QIL. Lots T13664 - T14045.",
+   "reason_for_recall": "Raw material issue may cause cardiac panel products to have an average of 30% troponin signal reduction across measurement range 0.05 ng/mL to 30 ng/mL, QC testing won't detect anomaly, so an alternate method is recommended, if unavailable, use recommendations to mitigate potential patient impact, which could be missed/delayed myocardial infarction diagnosis.",
+   "root_cause_description": "Nonconforming Material/Component",
+   "action": "On 5/25/2023, correction notices were sent to customers and distributors who were advised the following:\n\n1) If you have an alternate method, please discard all unused material.\n2) If you do not have an alternate method, please follow these steps, as applicable, to minimize patient risk.\na) Flag all negative results reported to clinicians as possibly inaccurate until lots of unaffected product are used.\nb) Use results from an alternate clinical laboratory analyzer when troponin results are below or close to the cutoff and myocardial infarction is suspected.\nc) Perform serial sampling. Keep patients until at least 3 negative troponin values have been obtained.\nd) Use all Triage troponin results in conjunction with the patient s risk factors, clinical presentation, EKG, and other imaging.\ne) Consider recommendations by the ACC, ESC guidelines and the Fourth Universal Definition of Myocardial Infarction for monitoring a patient for a rise or fall pattern of troponin.\n3) If you are experiencing issues with Proficiency testing, contact your local Technical Solutions Center.\n4) Complete and return the confirmation of receipt form.\n5) forward this notification if the product was distributed outside of your facility.\n\nIf you have further questions, please contact: \n- For North America, Canada, Asia-Pacific, and Latin America, please call 858.552.1100\n- For Europe, Middle East, and Africa, please call +353 (91) 412 474\n- For China, please call 0400 920 9366 or +86 021 3217 8300\n- EU authorized representative: MDSS GmbH, Tel.: +49-511-62628630, vigilance@mdss.com\n\nOn 7/12/23, Update/Reminder Notices were sent informing customers to:\nDiscontinue use of all affected devices. Use an unaffected lot number, obtain unaffected product, use an alternate method or send patients to an alternate testing site utilizing an alternate method. If an alternate method is not available, see above.",
+   "recalling_firm": "QUIDEL CARDIOVASCULAR INC",
+   "product_quantity": "16,194",
+   "distribution_pattern": "US: TX, NC, CA, LA, SC, OR, HI, OK, AZ, AL, KS, WA, FL, VA, IA, WV, MT, UT, CO MS, NM, MA, NJ, MO AK, IL, MN, WI, IN, GA, NE, MD.\n\nOUS: GBR, ITA, FRA, DEU, MCO, EGY, LCA, CHE, ASM, VIR, IRL"
+  },
+  {
+   "product_res_number": "Z-1991-2014",
+   "event_date_initiated": "2014-05-30",
+   "event_date_posted": "2014-07-02",
+   "recall_status": "Terminated",
+   "res_event_number": "68520",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K053020"
+   ],
+   "product_description": "ADVIA Centaur Systems TnI-Ultra assay; Catalog Number 02789602 (100 tests), SMN 10317708 and 02790309 (500 tests), SMN 10317790",
+   "reason_for_recall": "The solid phase reagent in some of the ADVIA Centaur TnI -Ultra ReadyPacks, lot 084, is darker in appearance, creating a potential for incorrect control and patient results.",
+   "root_cause_description": "Nonconforming Material/Component",
+   "action": "An Urgent medical Device Correction (UMDC) was mailed, via FedEx, to all affected Siemens Healthcare Diagnostics customers in the United States on May 30, 2014 for customer receipt on June 2, 2014. All international customers were provided with a copy of the Urgent Field Safety Notice via hard copy, e-mail, and/or fax as determined by each country's local regulations and procedures. Each customer is asked to complete a fax-back form. \n\nThis notice informed the customers of the potential for incorrect control and patient results due to solid phase which is darker in appearance.  The notice instructs customers to place one TnI-Ultra ReadyPack on the system at a time and to calibrate and run controls on each ReadyPack to ensure accurate control and patient values.  Patient TnI-Ultra results produced with this assay are acceptable if they follow acceptable calibration with valid quality control results.  Upon receipt of kit lots ending in 086 and higher, calibration of each ReadyPack is not required.  This notice should be reviewed with the facility's laboratory or medical director.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc",
+   "product_quantity": "34,283 kits",
+   "distribution_pattern": "Worldwide Distribution-USA (nationwide) including PR and the states of AK, AL, AR, AZ, CA, CO, CT, DE, FL, GA, HI, IA, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, WA, WI, WV, and WY, and the countries of Canada, Mexico, Argentina, Austria, Australia. Bahrain, Belgium, Brazil, Bulgaria, Chile, China, Colombia, Costa Rica, Croatia, Cyprus, Czech Republic, Denmark, Ecuador, Egypt, Estonia, Finland, France, French Polynesia, Great Britain, Greece, Guadeloupe, Hong Kong, Iceland, India, Indonesia, Ireland, Israel, Italy, Japan, Latvia, Lebanon, Libya, Macedonia, Malaysia, ,Malta, Martinique, Netherlands, New Zealand, Norway, Pakistan, Paraguay, Peru, Philippines, Poland, Portugal, Qatar, Reunion, Republic of Korea, Romania, Russian Federation, Serbia, Saudi Arabia, Singapore, Slovakia, Slovenia, Spain, Sri Lanka, South Africa, Sweden, Switzerland, Taiwan, Thailand, Tunisia, Turkey, United Arab Emirates, Uruguay, and Vietnam."
+  },
+  {
+   "product_res_number": "Z-1995-2010",
+   "event_date_initiated": "2010-03-11",
+   "event_date_posted": "2010-07-12",
+   "recall_status": "Terminated",
+   "res_event_number": "55206",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K010429",
+    "K021814"
+   ],
+   "product_description": "Access Immunoassay Systems enhanced AccuTnl Reagent Kit; Part Number: A78803\n\nThe Access AccuTnl assay is a paramagnetic particle, chemiluminescent immunoassay for the quantitative determination of cardiac troponin I (cTnI) levels in human serum and plasma using the Access Immunoassay Systems to aid in the diagnosis and treatment of myocardial infarction and cardiac muscle damage. Cardiac Troponin I determination aids in the risk stratification of patients with unstable angina or non-ST segment elevation acute coronary syndromes with respect to relative risk of mortality, myocardial infarction, or increased probability of ischemic events requiring urgent revascularization procedures.",
+   "reason_for_recall": "The recall was initiated because as a follow up to PCA # 12605 dated December 16, 2009, Beckman Coulter has confirmed additional reports that each of the following assays may produce lower than expected results when run in conjunction with Access AccuTnl (REF A78803):\n(1) Access Testosterone (REF 33560);\n(2) Access Thyroid Uptake (REF 33810);\n(3) Access Total T4 (REF 33800).\nThis issue can occ",
+   "root_cause_description": "Other",
+   "action": "The firm, Beckman Coulter, issued a \"URGENT:  PRODUCT CORRECTIVE ACTION\" (PCA) letter with attached Customer Response form dated March 24, 2010 to all customers. The letter describes the issue, impact, action and resolution.  \n\nIn the PCA beckman Coulter recommends the following mitigation to reduce the risk of generating erroneous results: \n(1) Verify the APF software on the immunoassay system. If the updated APF software listed in the table above was already loaded , skip the remainder of this section and proceed to the Resolution section;\n(2) If the updated APF software has not yet been loaded, but is available, load the software appropriate for the system, skip the remainder of this section and proceed to the Resolution section;\n(3) If the updated APF software is not immediately available, please contact Technical Support at 1-800-854-3633 in the United States and Canada. Consignees outside the United States and Canada, contact their local Beckman Coulter Representative and follow the instructions below until the software has been loaded on their system.\n (a) Access and Access 2 users should batch process Access Testosterone, Thyroid Uptake, or Total T4 samples; \n(b) For UniCel DxI users, assign Access AccuTnI (REF A78803) to a different reagent pipettor(s) than Access Testosterone, Thyroid Uptake, or Total T4;\n(c) The Access Testosterone, Thyroid Uptake, or Total T4 results should be interpreted in light of the total clinical presentation of the patient, including: symptoms, clinical history, data from additional tests, and other appropriate information. Abnormally low Access Testosterone, Thyroid Uptake, or Total T4 results from samples tested in conjunction with Access AccuTnI (REF A78803) should be reviewed in the context of other diagnostic tests.\n\nCustomers were instructed that after loading the updated APF software, the Access AccuTnI assay (REF A78803, test code TropI, test ID 275) must be recalibrated. Recalibrate of the Access Testosterone, T",
+   "recalling_firm": "Beckman Coulter Inc.",
+   "product_quantity": "32,407 units",
+   "distribution_pattern": "Worldwide distribution: USA and countries of Algeria, Australia, Bangladesh, Belgium, Bulgaria, Canada, Chile, Czech Republic, France, Germany, Greece, Hong Kong, Ireland, Israel, Italy, Lebanon, Libyan Arab Jamahiriya, Monaco, Namibia, Netherlands, New Zealand, Nigeria, Oman, Pakistan, Poland, Puerto Rico, Romania, Russian Federation, South Africa, Spain, Swaziland, Sweden, Switzerland, Thailand, Turkey, United Arab Emirates, United Kingdom, and Uruguay."
+  },
+  {
+   "product_res_number": "Z-2041-2016",
+   "event_date_initiated": "2016-05-02",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "74036",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K053020"
+   ],
+   "product_description": "Siemens Healthcare ADVIA Centaur Tnl-Ultra Assay . In-Vitro Diagnostic for quantitative determination of cardiac troponin  For in vitro diagnostic use in the quantitative determination of cardiac troponin I (cTnl) in serum, heparinized plasma, or EDTA plasma using the ADVIA Centaur/ADVIA Centaur XP/ADVIA Centaur XPT/ADVIA Centaur CP systems\nCat No. 02789602/SMN 1031 7708 (100 test)\nCat No. 02790309/SMN 10317709 (500 test)",
+   "reason_for_recall": "Exhibits a greater than 10% change in results in samples with biotin levels up to 10 ng/mL (41 nmol/L). Instructions for Use (IFU) states that specimens that have up to 10 ng/mL (41 nmol/L) of biotin",
+   "root_cause_description": "Component design/selection",
+   "action": "Siemens Healthcare sent an Urgent Medical Device Correction letter dated May 2, 2016, The letter identified the product, the problem and the action to be taken by the customer.  Customers were instructed to continue use of the affected product, review the letter with their doctor, complete and return the Field Correction Effectiveness Check attached to the letter.  If customers received any complaints of illness or adverse events associated wit the affected product they should immediately contact their local Siemens Customer Care Center or their local Siemens technical support representative.  Customers with questions should contact their Siemens Customer Care Center or their local Siemens technical support representative.\nFor questions regarding this recall call 508-668-5000.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc",
+   "product_quantity": "SMN 10317708 = 16434 kits and SMN 10317709 = 16033 kits",
+   "distribution_pattern": "Worldwide Distribution - US (Nationwide) and Internationally to Albania Austria\nBelgium Bulgaria Burkina Faso Canada Croatia Cyprus Czech Republic Denmark Egypt Estonia Finland France French Polynesia Georgia Germany Great Britain Greece Guadeloupe Hungary  Iceland Italy Kazakhstan Latvia Lithuania Luxembourg Macedonia Malta Martinique Netherlands Norway Poland Portugal Romania Russian Federation Serbia Slovakia Slovenia Spain Sweden Switzerland Tunisia Turkey United Arab Emirates and Uzbekistan."
+  },
+  {
+   "product_res_number": "Z-2073-2018",
+   "event_date_initiated": "2018-03-05",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "79813",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K012820"
+   ],
+   "product_description": "ST-AIA PACK cTnI 2nd Gen; Part Number: 025205\n\n Assay, Cardiac Marker",
+   "reason_for_recall": "Asfotase Alfa (Strensiq) interferes with certain Tosoh assays which potentially causes falsely increased or falsely decreased immunoassay test results, depending upon the assay.",
+   "root_cause_description": "Device Design",
+   "action": "The firm TOSOH Bioscience Inc., sent an \"URGENT: MEDICAL DEVICE RECALL\" letter dated March 23, 2018 to affected customers. The letter described the product, problem and action to be taken. The customers were instructed to do the following:  \n*Based on our revised labeling, the assays identified in Table 1 should not be used for patients who are being treated with Asfotase Alfa.\n\" For patients that are being treated with Asfotase Alfa, use an alternative test method that does not utilize alkaline phosphatase technology.\n\" Inform all medical professionals that assays utilizing alkaline phosphatase-based technologies must not be used for patients receiving Asfotase Alfa treatment. Continue to use the assays listed in Table 1 for any patients who are not receiving Asfotase Alfa treatment.\n\" Complete and return the attached Acknowledgement Form to Tosoh Bioscience, Inc., within 15-days of receiving this notification via Fax: 1-650-636-8651, Email: biorecallresponse@tosoh.com or Regular mail: 3600 Gantz Rd., Grove City, OH 43123.\n\" Maintain this notification with your laboratory records and forward this information to others who may have received this product.\n\" If you have obtained unexpected test results or received any complaints of illness or adverse events associated with the use of the products identified in the table above, contact Tosoh Technical Support 24 hours a day, seven days a week at (800) 248-6764.\n\nShould you have any questions regarding this medical device recall, please feel free to call (800) 248-6764 or  email: bernadette.oconnell@tosoh.com. Monday - Friday, from 9:00 AM to 5:00 PM (PST).",
+   "recalling_firm": "Tosoh Bioscience Inc",
+   "product_quantity": "5802",
+   "distribution_pattern": "Worldwide Distribution: US (Nationwide) and countries of; Canada, Mexico, Columbia, Chile, Uruguay, Nicaragua, Argentina, Peru, Chile, Honduras. Equador, Caymen Islands, Panama, and Costa Rica."
+  },
+  {
+   "product_res_number": "Z-2135-2019",
+   "event_date_initiated": "2019-05-29",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "82990",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K051650"
+   ],
+   "product_description": "Stratus CS Acute Care cTNI TestPak, SMN 10445071\n\nProduct Usage:\nIn vitro diagnostic test for the measurement of cardiac troponin I in heparinized plasma. Cardiac troponin I measurements can be used as an aid in the diagnosis of acute myocardial infarction (AMI).",
+   "reason_for_recall": "Potential for increased rate of false positive results and/or increased rate of random non-repeatable false positive results.",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "On May 29, 2019, Siemens issued Urgent Medical Device Correction notices to U.S.A. customers via FedEx courier service and Urgent Field Safety Notices to international customers via email.  \n\nActions to be Taken by the Customer:\n1. Do not use TestPaks within 2 mos of expiration.\n2. Repeat samples with cTNL results above 0.07 ng/mL or your institution's established 99th percentile value.\n3. Complete and return the Field Correction Effectiveness Check form\n4. Retain a copy of the letter with your laboratory records and forward a copy of the notice to anyone to whom you may have distributed the product.\n\nSiemens is working to resolve this issue and will contact customers when additional information is available.  Siemens will reimburse users for repeat tests and discarded cTNL TestPaks within 2 months of the printed expiration date associated with this field corrective action.",
+   "recalling_firm": "Siemens Healthcare Diagnostics Inc",
+   "product_quantity": "2312",
+   "distribution_pattern": "US Nationwide Distribution"
+  },
+  {
+   "product_res_number": "Z-2169-2012",
+   "event_date_initiated": "2012-02-01",
+   "event_date_posted": "2012-08-09",
+   "recall_status": "Terminated",
+   "res_event_number": "62533",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031739"
+   ],
+   "product_description": "i-Stat cTnl cartridges\nAbbott Point of Care Inc.\n\n\nThe i-Stat cTnl test is an in vitro diagnostic test for the quantitative measurement of cardiac troponin I in heparinized whole blood or plasma samples. Cardiac troponin I measurements can be used as an aid in the diagnosis and treatment of myocardial infarction and in the risk stratification of patients with acute coronary syndromes with respect to their relative risk of mortality. The cartridge is to be used with the i-Stat Analyzer, but not with the i-Stat Portable Clinical Analyzer or the Philips Medical System (formerly Agilent Technologies) Blood Analysis Module (BAM). As part of the i-Stat System, the cTnl test is to be used by trained health care professionals in accordance with a facility's policies and procedures.",
+   "reason_for_recall": "The frequency of suppressed results for i-Stat cTnl, BNP and CK-MP cartridges is affected by atmospheric pressure.",
+   "root_cause_description": "Device Design",
+   "action": "Abbott Point of Care (APOC) sent an URGENT RECALL NOTICE dated February 2012 to all affected customers via e-mail and also contacted by phone.  The letter identified the product, the problem, and the action to be taken by the customer.  Customers were advised that if their facility was performing testing at more than approximately 7500 feet above sea level, they should have an alternate test method available should they experience an issue.  If they have forwarded any cartridges to another facility, they should provide a copy of the Urgent Recall Notice to them.  For questions customers were instructed to call 800-366-8020, Option 1 or contact their Abbott Point of Care representative.\nFor questions regarding this recall call 609-454-9000.",
+   "recalling_firm": "Abbott Point Of Care Inc.",
+   "product_quantity": "7,057,675 cartridges US ; 772,400 OUS",
+   "distribution_pattern": "Worldwide Distribution - USA including AZ and CO and internationally to  Argentina, Australia, Austria, Belgium, Bolivia, Brazil, Chile, China, Colombia, Costa Rica, Dominican Republic, El Salvador, Finland, France, Georgia,  Germany, Greece, Honduras, Hong Kong, India, Ireland, Italy, Korea, Kuwait, Mauritius, Mexico, Netherland (Antilles), Nigeria, Norway, Oman, Paraguay, Peru, Poland, Portugal, Qatar, Russia, Saudi Arabia, Singapore, South Africa, Spain, Sweden, Switzerland, Taiwan, R.O.C., Thailand, UAE, United Kingdom, and Yemen."
+  },
+  {
+   "product_res_number": "Z-2207-2015",
+   "event_date_initiated": "2015-05-19",
+   "event_date_posted": "2015-07-23",
+   "recall_status": "Terminated",
+   "res_event_number": "71337",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K053020"
+   ],
+   "product_description": "ADVIA Centaur Tni-Ultra Assay; SMN 10317708 - 100 tests and SMN 10317709 -500 tests\n\nProduct Usage:\nFor in vitro diagnostic use in the quantitative determination of cardiac troponin I (cTnl) in serum, heparinized plasma, or EDTA plasma using the ADVIA Centaur/ADVIA Centaur XP/ADVIA Centaur XPT/ADVIA Centaur CP systems. Cardiac troponin I determinations aid in the diagnosis of acute myocardial infarction and in the risk stratification of patients with non-ST segment elevation acute coronary syndromes with respect to relative risk of mortality, myocardial infarction (MI) or increased probability of ischemic events requiring urgent revascularization procedures.",
+   "reason_for_recall": "System-to-system bias between the Tni-Ultra assay on\nthe ADVIA Centaur CP and ADVIA Centaur/ADVIA Centaur XP/ADVIA Centaur XPT systems.",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "Siemens sent an Urgent Medical Device Correction letter dated via Federal Express to affected customers.  The letter identified the affected product, problem and actions to be taken.  Customers were instructed to complete and return the Field Correction Effectiveness Check attached to the letter.\nFor questions contact your Siemens Customer Care Center or your local Siemens technical support representative.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc",
+   "product_quantity": "SMN10317708 = 20544 kits & SMN 10317709 = 21159 kits",
+   "distribution_pattern": "Worldwide distribution - US Nationwide in the states of AK, AL, AR, AZ, CA, CO, CT, FL, GA, HI, IA, IL, IN, KS, KY, LA, MA, MD, MI, MO, MN, MS, MT, NC, NJ, NM, NY, NV, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, WA, WI, WY, WV, and Puerto Rico; and the countries of Algeria, Austria, Bahrain, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Great Britain, Greece, Hungary, Iceland, Indonesia, Ireland, Italy, Jordan, Latvia, Lebanon, Lithuania, Luxembourg, Macedonia, Malta, Morocco, Netherlands, Norway, Pakistan, Poland, Portugal, Qatar, Romania, Russian Federation, Saudi Arabia, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tunisia, Turkey, United Arab Emirates,  AR, AU, BD, BR, CA, CL, CN , CO, CR, DO, EC, HK, ID, IE, IL, IN, JP, KR, LK, MX, MY, NI, NP, NZ, PE, PH, PY, SA, SG, TH, TW, UY, VN, and ZA."
+  },
+  {
+   "product_res_number": "Z-2237-2012",
+   "event_date_initiated": "2012-03-07",
+   "event_date_posted": "2012-08-22",
+   "recall_status": "Terminated",
+   "res_event_number": "62410",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K031739"
+   ],
+   "product_description": "i-STAT cTnI cartridges\n\n\nProduct Usage:\nThe i-STAT cTnl test is an in vitro diagnostic test for the quantitative measurement of cardiac troponin I in heparinized whole blood or plasma samples. Cardiac I troponin measurement cane be used as an aid in the diagnosis and treatment of myocardial infarction and in the risk stratification of patients with acute coronary syndromes with respect to their relative risk of mortality.",
+   "reason_for_recall": "Abbott Point of Care has determined that i-Stat CTNL cartridges have the potential to exhibit incorrectly elevated cardiac troponin I results.  This recall was expanded on July 19 2012 to include additional information regarding user documentation.",
+   "root_cause_description": "Device Design",
+   "action": "Abbott Point of Care (APOC) sent an Urgent Recall Notice letters, via Fed Ex on March 07, 2012 to all affected customers.  APOC sent an important product information update on July 19, 2012 to all of their affected customers.  The letter identified the affected product, problem and actions to be taken.  Customers are asked to review the information included as it may pertain to their cartridges.  Customers were instructed that if the affected product have been forwarded to another facility, provide a copy of this letter to them.  For additional information, contact APOC at 800-366-8020 option 1 or your Abbott Point of Care representative.",
+   "recalling_firm": "Abbott Point Of Care Inc.",
+   "product_quantity": "7,057675 cartridges US; 772,400 cartridges OUS",
+   "distribution_pattern": "Worldwide Distribution - US Nationwide, International"
+  },
+  {
+   "product_res_number": "Z-2357-2023",
+   "event_date_initiated": "2023-06-05",
+   "event_date_posted": "2023-08-08",
+   "recall_status": "Open, Classified",
+   "res_event_number": "92662",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K062838",
+    "K992366"
+   ],
+   "product_description": "VITROS Immunodiagnostic Products Troponin I ES Reagent Pack",
+   "reason_for_recall": "Reagent packs could potentially contain incorrect wells, which will generate incorrect, and potentially false negative, results.",
+   "root_cause_description": "Process control",
+   "action": "Customers were sent a recall notification by mail dated 06/05/2023. The notification that customers immediately discontinue use of affected devices and discard any remaining inventory. Any discarded product will be replaced by QuidelOrtho or credit will be provided. Customers are asked to return the provided Confirmation of Receipt Form no later than 06/12/2023. If affected devices were further distributed customers are asked to forward the provided notification to those downstream customers. This notice is to be posted by all VITROS Systems until the expiration of affected devices, which is 06/10/2023. Customers with any questions may contact Quidel Ortho at 1-800-421-3311.",
+   "recalling_firm": "ORTHO-CLINICAL DIAGNOSTICS",
+   "product_quantity": "4,013 units",
+   "distribution_pattern": "Worldwide distribution - US Nationwide and the country of Canada."
+  },
+  {
+   "product_res_number": "Z-2358-2023",
+   "event_date_initiated": "2023-06-05",
+   "event_date_posted": "2023-08-08",
+   "recall_status": "Open, Classified",
+   "res_event_number": "92662",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K062838",
+    "K992366"
+   ],
+   "product_description": "VITROS Immunodiagnostic Products Troponin I ES Calibrators",
+   "reason_for_recall": "Reagent packs could potentially contain incorrect wells, which will generate incorrect, and potentially false negative, results.",
+   "root_cause_description": "Process control",
+   "action": "Customers were sent a recall notification by mail dated 06/05/2023. The notification that customers immediately discontinue use of affected devices and discard any remaining inventory. Any discarded product will be replaced by QuidelOrtho or credit will be provided. Customers are asked to return the provided Confirmation of Receipt Form no later than 06/12/2023. If affected devices were further distributed customers are asked to forward the provided notification to those downstream customers. This notice is to be posted by all VITROS Systems until the expiration of affected devices, which is 06/10/2023. Customers with any questions may contact Quidel Ortho at 1-800-421-3311.",
+   "recalling_firm": "ORTHO-CLINICAL DIAGNOSTICS",
+   "product_quantity": "4,013 units",
+   "distribution_pattern": "Worldwide distribution - US Nationwide and the country of Canada."
+  },
+  {
+   "product_res_number": "Z-2400-2010",
+   "event_date_initiated": "2010-04-13",
+   "event_date_posted": "2010-09-11",
+   "recall_status": "Terminated",
+   "res_event_number": "55610",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K051650"
+   ],
+   "product_description": "Stratus CS Acute Care Troponin I TestPak ( Troponin I assay)",
+   "reason_for_recall": "False elevated Stratus CS CTNI results",
+   "root_cause_description": "Process control",
+   "action": "Recalling firm issued \" Urgent Field Safety Notice\" dated April 2010, informing users of the problem and to discuss with laboratory directors regarding the need to review previous test results, conduct patient follow up, and/or repeat testing for tests conducted on or after Nov 1, 2009.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "7500 cartons",
+   "distribution_pattern": "Nationwide Distribution"
+  },
+  {
+   "product_res_number": "Z-2436-2018",
+   "event_date_initiated": "2018-03-21",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "79784",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K081643"
+   ],
+   "product_description": "Dimension Vista CTNI Sample Diluent, KD692, SMN# 10445205",
+   "reason_for_recall": "The diluent may have an incomplete slit on the septum in the cap of the vial.  A diluent cap with a defective septum has the potential to cause erroneously elevated results if a sample is autodiluted onboard the system, due to a reduced volume of diluent being pipetted from the vial.",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "Notification letters were distributed 3/21/18.  The letters instructed customers to:\n\n Inspect stock, discontinue use of and discard the Dimension Vista Diluent lots listed in Table 1.\n Please review this letter with your Medical Director.\n Review your inventory of these products to determine your laboratorys replacement needs and to provide information to Siemens for reporting to the authorities.\n Complete and return the Field Correction Effectiveness Check Form attached to this letter within 30 days.\n If you have received any complaints of illness or adverse events associated with the product listed in Table 1, immediately contact your local Siemens Customer Care Center or your local Siemens Technical Support Representative.\nPlease retain this letter with your laboratory records, and forward this letter to those who may have received this product.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "1446",
+   "distribution_pattern": "The products were distributed to the following US states: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, WA, WI, WV, and WY.  The products were distributed to Guam, Saipan, and Virgin Islands.  \n\nThe products were distributed to the following countries: Australia, Austria, Bahamas, Belgium, Brazil, Canada, Canary Islands, Croatia, Czech Republic, Denmark, France, Germany, Italy, Japan, Lebanon, Netherlands, Poland, Portugal, Qatar, Russian Federation, Slovakia, Slovenia, Saudi Arabia, South Korea, Spain, Switzerland, and United Arab Emirates."
+  },
+  {
+   "product_res_number": "Z-2606-2017",
+   "event_date_initiated": "2017-03-21",
+   "event_date_posted": "2017-05-05",
+   "recall_status": "Terminated",
+   "res_event_number": "76915",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K081643"
+   ],
+   "product_description": "Dimension Troponin 1 (TNI) Flex reagent cartridge",
+   "reason_for_recall": "The concentrations for Biotin listed in the Non-Interfering Substances section of the current Dimension and Dimension Vistat Instructions for Use (IFU) for Dimension TNI, Dimension Vista DIGXN, E2, FERR, PRL, and TSH have incorrect units, and incorrectly state the level at which biotin does not interfere.",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "Siemens mailed an Urgent Medical Device Correction Letter to affected customers on 03/29/2017 to inform them of the issue.  The notice explained the reason for the field action, Risk to Health and actions to be taken by the customer.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "70,428 units",
+   "distribution_pattern": "Product was distributed throughout the United States and Canada, United Arab Emirates, Argentina, Austria,Australia,Bangladesh,Belgium,Brazil,Canada\r\nSwitzerland,China,Columbia,Czech Republic,Germany,Denmark,Algeria\r\nEgypt,Spain,Finland,France,Great Britain,Greece,Croatia,Indonesia,Ireland\r\nIndia,Italy,Japan,Canary Islands,Republic of Korea,Kuwait,Lebanon,Latvia\r\nMacedonia,Netherlands,Norway,New Zealand,Philippines,Poland,Portugal\r\nQatar,Saudi Arabia,Slovenia,Slovakia,Turkey,Taiwan,South Africa"
+  },
+  {
+   "product_res_number": "Z-2927-2020",
+   "event_date_initiated": "2020-07-24",
+   "event_date_posted": null,
+   "recall_status": "Terminated",
+   "res_event_number": "86151",
+   "product_code": "MMI",
+   "k_numbers": [
+    "K182225"
+   ],
+   "product_description": "Dimension Vista High Sensitivity Troponin I (TNIH) Flex reagent cartridge-IVD-In vitro diagnostic use in the quantitative measurement of cardiac troponin I in human plasma\nCatalog Number K6427, SMN# 104471067",
+   "reason_for_recall": "Dimension Vista High Sensitivity Troponin I (TNIH) may exhibit a negative bias with patient samples",
+   "root_cause_description": "Under Investigation by firm",
+   "action": "Siemens Healthcare issued Urgent Medical Device Correction (UMDC # VC-20-03.A.US) and Urgent Field Safety Notice (UFSN # VC-20-03.A.OUS) on July 24, 2020 to Dimension Vista customers who received the Dimension Vista TNIH reagent to notify them of the issue, the potential risk to health, and actions to be taken by the customer.  \nCustomers were instructed to: \n\"Review the letter with their Medical Director\nUse lot specific correlation factors with lots 20008BB, 20035BC, and 20135BB.\nSiemens is working to restore assay performance, until such time, subsequent lots may contain an alert card in the carton containing lot specific correlation factors\n.\"Complete and return the Field Correction Effectiveness Check Form attached to the letter within 30 days.\n\"If they have received any complaints of illness or adverse events associated with the product listed in Table 1 of the letter, immediately contact their local Siemens Remote Services Center or their local Siemens Technical Support Representative.\nQuestions, please contact your Siemens Remote Services Center or your local Siemens Technical Support.",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "product_quantity": "US: 1239 units OUS: 3387",
+   "distribution_pattern": "Nationwide"
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+# Connectors the radar can pull from. Add your own subscriptions here.
+#
+# type:
+#   openfda_510k / openfda_recall  - FDA open data API (public, no key needed; OPENFDA_API_KEY raises the quota)
+#   clinicaltrials_gov             - ClinicalTrials.gov API v2 (public)
+#   pubmed                         - NCBI E-utilities (public; NCBI_API_KEY optional)
+#   rss                            - any RSS/Atom news feeds or company newsrooms
+#   rest_json                      - a licensed market research database with a JSON API
+#   file_json                      - a local JSON export (used for the fictional sample databases)
+#   replay                         - releases items from a scenario file on their dates (demo and evaluation)
+#
+# licence: one of the profiles in config/licences.yaml. It travels with every fact
+# taken from the source and decides what may be quoted, exported or shared.
+
+connectors:
+  openfda_510k:
+    type: openfda_510k
+    label: FDA 510(k) clearances
+    licence: public
+    snapshot: data/public/openfda_510k_MMI.json      # used when the API is unreachable
+
+  openfda_recall:
+    type: openfda_recall
+    label: FDA recalls
+    licence: public
+    snapshot: data/public/openfda_recall_MMI.json
+
+  clinicaltrials_gov:
+    type: clinicaltrials_gov
+    label: ClinicalTrials.gov
+    licence: public
+
+  pubmed:
+    type: pubmed
+    label: PubMed literature
+    licence: public
+
+  news_rss:
+    type: rss
+    label: News and press releases
+    licence: public_news            # headlines and short extracts only
+    feeds:
+      # Examples. Replace with the outlets and company newsrooms you follow.
+      - https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/medical-devices/rss.xml
+      - https://news.google.com/rss/search?q=%22point-of-care%22+troponin&hl=en-US&gl=US&ceid=US:en
+
+  patents:
+    type: replay                    # no free patent API is wired in yet; the demo replays sample items
+    label: Patents
+    licence: public
+
+  licensed_db_a:
+    type: file_json
+    label: Sample Market DB A (fictional)
+    licence: licensed_no_quote
+    path: data/licensed_mock/sample_db_a.json
+    records_path: data.items
+    map: {id: id, title: report_title, published: release_date, region: geography, year: base_year,
+          value_low: value_usd_bn, value_high: value_usd_bn, cagr: cagr_pct, cagr_period: forecast_period, segment: segment}
+
+  licensed_db_b:
+    type: file_json
+    label: Sample Market DB B (fictional)
+    licence: licensed_no_quote
+    path: data/licensed_mock/sample_db_b.json
+    records_path: data.items
+    map: {id: id, title: report_title, published: release_date, region: geography, year: base_year,
+          value_low: value_usd_bn, value_high: value_usd_bn, cagr: cagr_pct, cagr_period: forecast_period, segment: segment}
+
+  # A real subscription plugs in like this. Endpoint, auth and field names come from
+  # your vendor's API documentation; the radar never commits keys or pulled data.
+  # my_vendor:
+  #   type: rest_json
+  #   label: My market research vendor
+  #   licence: licensed_no_quote
+  #   base_url: https://api.vendor.example/v1
+  #   endpoint: /market-estimates
+  #   auth_env: MY_VENDOR_API_KEY       # sent as a Bearer token
+  #   params: {category: "{diagnostic_solution}"}
+  #   records_path: data.items
+  #   map:
+  #     title: report_title
+  #     published: release_date
+  #     region: geography
+  #     year: base_year
+  #     value_low: value_usd_bn
+  #     value_high: value_usd_bn
+  #     cagr: cagr_pct
+  #     cagr_period: forecast_period
+
+  upload:
+    type: upload
+    label: Your uploaded reports
+    licence: upload_internal
