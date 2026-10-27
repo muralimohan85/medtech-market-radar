@@ -83,7 +83,16 @@ def radar() -> Radar:
             elif key == "real":
                 cache[key] = build_real(live)
             else:
-                cache[key] = build_user(key.split(":", 1)[1], live)
+                wid = key.split(":", 1)[1]
+                if watches.find(wid) is None:
+                    # the saved file is gone, e.g. Streamlit Cloud reset its storage on a restart or redeploy
+                    st.warning(f"The saved watch '{wid}' is no longer in this app's storage (hosted apps lose saved files when they "
+                               "restart). Showing the demo instead. Recreate it, or import its YAML on the Watches page.")
+                    st.session_state["watch"] = "demo"
+                    st.session_state["next_watch"] = "demo"
+                    cache.pop(key, None)
+                    return radar()
+                cache[key] = build_user(wid, live)
     return cache[key]
 
 
@@ -678,6 +687,25 @@ def watch_list() -> None:
                 open_watch(BUILTIN_KEYS[w["id"]])
 
 
+def import_watch() -> None:
+    with st.expander("Import a watch (YAML)"):
+        st.caption("Restore a brief you downloaded earlier. Hosted apps such as Streamlit Community Cloud lose saved files when "
+                   "they restart, so keep a copy of each watch with the Download button below the form.")
+        f = st.file_uploader("Watch brief", type=["yaml", "yml"], key="import_yaml", label_visibility="collapsed")
+        replace = st.checkbox("Replace a saved watch with the same id", key="import_replace")
+        if f and st.button("Import", type="primary"):
+            try:
+                data = yaml.safe_load(f.getvalue().decode("utf-8")) or {}
+                b, _ = watches.save(data, overwrite=replace)
+            except FileExistsError:
+                st.error("A watch with that id already exists. Tick 'Replace' to overwrite it.")
+            except Exception as e:  # noqa: BLE001 - show the problem with the file to the user
+                st.error(f"Could not import this file: {e}")
+            else:
+                flash(f"Imported '{b.name}'.")
+                st.rerun()
+
+
 def page_new_watch() -> None:
     show_flash()
     st.markdown("# Watches")
@@ -685,6 +713,7 @@ def page_new_watch() -> None:
        'evidence database.</div>')
     st.write("")
     watch_list()
+    import_watch()
     st.write("")
 
     rows = watches.list_watches()

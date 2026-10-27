@@ -56,6 +56,8 @@ class WatchBrief(BaseModel):
             from radar.watches import find  # your saved watches first, then the built-in ones
 
             p = find(str(watch_id_or_path)) or CONFIG / "watches" / f"{watch_id_or_path}.yaml"
+        if not p.exists():
+            raise FileNotFoundError(f"no watch called '{watch_id_or_path}' (looked in your saved watches and config/watches)")
         return cls(**load_yaml(p))
 
     @property
