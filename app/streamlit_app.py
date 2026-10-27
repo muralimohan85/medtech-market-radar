@@ -654,7 +654,6 @@ def watch_list() -> None:
     yours = [w for w in rows if w["kind"] == "yours"]
     builtin = [w for w in rows if w["kind"] == "built-in"]
     cat = {c["name"]: c for c in watches.catalogue()}
-    st.markdown(f"**Your watches ({len(yours)})**")
     if not yours:
         st.caption("None yet. Create one below; it is saved to your workspace and appears in the sidebar.")
     for w in yours:
@@ -688,7 +687,7 @@ def watch_list() -> None:
 
 
 def import_watch() -> None:
-    with st.expander("Import a watch (YAML)"):
+    with st.expander("Import a watch (YAML)", key="import_expander"):
         st.caption("Restore a brief you downloaded earlier. Hosted apps such as Streamlit Community Cloud lose saved files when "
                    "they restart, so keep a copy of each watch with the Download button below the form.")
         f = st.file_uploader("Watch brief", type=["yaml", "yml"], key="import_yaml", label_visibility="collapsed")
@@ -712,19 +711,29 @@ def page_new_watch() -> None:
     md('<div class="mr-sub">Create, edit and open watches. Each one is saved as a YAML brief in your workspace and keeps its own '
        'evidence database.</div>')
     st.write("")
-    watch_list()
-    import_watch()
-    st.write("")
-
     rows = watches.list_watches()
     by_id = {w["id"]: w for w in rows}
     start_opts = ["template"] + [w["id"] for w in rows]
-    editing = st.session_state.pop("edit_watch", None)
-    if editing in by_id:
+    editing = st.session_state.pop("edit_watch", None)          # set by Edit / Save; applied before the selectbox exists
+    if editing in by_id or editing == "template":
         st.session_state["start_from"] = editing
     if st.session_state.get("start_from") not in start_opts:
         st.session_state["start_from"] = "template"
-    st.markdown("### Create or edit a watch")
+    current = by_id.get(st.session_state["start_from"])
+    editing_yours = bool(current and current["kind"] == "yours")
+
+    import_watch()                         # first, so its position (and open/closed state) never shifts
+    if editing_yours:
+        c1, c2 = st.columns([5, 1])
+        c1.info(f"Editing **{current['name']}**. Change the form below, then press *Save changes*.")
+        if c2.button("Stop editing", width="stretch"):
+            st.session_state["edit_watch"] = "template"
+            st.rerun()
+    n_yours = sum(1 for w in rows if w["kind"] == "yours")
+    st.markdown(f"**Your watches ({n_yours})**")
+    watch_list()
+    st.write("")
+    st.markdown(f"### Editing: {current['name']}" if editing_yours else "### Create a watch")
     st.selectbox("Start from", start_opts, key="start_from",
                  format_func=lambda k: "Blank template (troponin example)" if k == "template"
                  else f"{by_id[k]['name']} ({'edit yours' if by_id[k]['kind'] == 'yours' else 'copy of built-in'})")
@@ -857,7 +866,7 @@ def page_new_watch() -> None:
                 flash(f"Saved '{b.name}' to {path.name}. It is listed above and in the sidebar.")
                 if save_open:
                     open_watch(f"user:{b.id}")
-                st.session_state["start_from"] = b.id
+                st.session_state["edit_watch"] = b.id          # applied before the selectbox on the next run
                 st.rerun()
         text = yaml.safe_dump(brief, sort_keys=False, allow_unicode=True)
         st.download_button("Download brief (YAML)", text, f"{brief['id']}.yaml", width="stretch")

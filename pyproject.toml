@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-app = ["streamlit>=1.50", "altair>=5.3", "pandas>=2.1"]
+app = ["streamlit>=1.66", "altair>=5.3", "pandas>=2.1"]
 eval = ["matplotlib>=3.8", "reportlab>=4.0"]
 dev = ["pytest>=8", "ruff>=0.5"]
 
